@@ -1,0 +1,253 @@
+/*Colors*/
+/*Fonts and sizes*/
+body {
+  background-color: #fde4fe;
+  font-family: "Alexandria", serif;
+  /*Index SCSS*/
+  /*Contact SCSS*/
+}
+body #btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+body #btn-back-to-top svg {
+  background-color: #fde4fe;
+  border: 5px solid #fde4fe;
+  border-radius: 100px;
+}
+body #btn-back-to-top:active {
+  border: 0px solid;
+}
+body header {
+  background-color: #953154;
+}
+body header .nav-header .input-group {
+  width: 150px;
+  background-color: white;
+  border-radius: 100px;
+}
+body header .nav-header .input-group button:active {
+  border: 0px solid;
+}
+body header .nav-header .input-group .form-control {
+  border-radius: 100px;
+  border: none;
+  color: #953154;
+}
+body header .nav-header .input-group .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
+}
+body header .nav-burger .offcanvas-header, body header .nav-burger .offcanvas-footer {
+  background-color: #953154;
+}
+body header .nav-burger .offcanvas-body {
+  background-color: #e59eb9;
+}
+body header .nav-burger .offcanvas-body ul .nav-item {
+  margin: 30px 0px 0px 30px;
+}
+body header .nav-burger .offcanvas-body ul .nav-item a {
+  color: #953154;
+}
+body header .nav-burger .offcanvas-body ul .nav-item a:hover {
+  color: white;
+}
+body header .nav-burger .input-group {
+  background-color: white;
+  border-radius: 100px;
+  width: 100%;
+}
+body header .nav-burger .input-group input {
+  border-radius: 100px;
+  border: none;
+  color: #953154;
+}
+body header .nav-burger div .navbar-toggler {
+  border: none;
+}
+body header .nav-burger div .navbar-toggler:focus {
+  box-shadow: 0 0 0 0 rgba(229, 158, 185, 0.25);
+}
+body header .nav-burger .offcanvas {
+  transition: transform 0.3s ease-in-out;
+}
+body header .nav-burger .offcanvas .offcanvas-header .btn-close:focus {
+  box-shadow: 0 0 0 0 rgba(229, 158, 185, 0.25);
+}
+body .nav-computer {
+  background-color: #e59eb9;
+}
+body .nav-computer .nav-pills li a {
+  color: #953154;
+  margin: 0px 10px 0px 10px;
+}
+body .nav-computer .nav-pills li a:hover {
+  color: white;
+}
+body .nav-computer .nav-pills li ul {
+  background-color: #e59eb9;
+  border-radius: 0px;
+  border: none;
+}
+body .nav-computer .nav-pills li ul li a {
+  color: #953154;
+}
+body .nav-computer .nav-pills li ul li a:hover {
+  background-color: #953154;
+}
+body main section {
+  background-color: #d9aebd;
+  border-radius: 20px;
+  /*SECTION 1*/
+  /*SECTION 2*/
+}
+body main section #carouselExampleCaptions .carousel-indicators button {
+  background-color: #953154;
+}
+body main section #carouselExampleCaptions img {
+  max-height: 300px;
+}
+body main section #carouselExampleCaptions .carousel-caption {
+  color: #953154;
+  right: 0;
+  left: 0;
+}
+body main section #carouselExampleCaptions .carousel-caption a {
+  color: #953154;
+}
+body main section #carouselExampleCaptions .carousel-caption a:hover {
+  color: white;
+}
+body main section #carouselExampleCaptions button span {
+  background-color: #953154;
+  border-radius: 10px;
+}
+body main section .container .col-6 {
+  transition: transform 0.2s;
+  color: #953154;
+}
+body main section .container .col-6:hover {
+  transform: scale(1.1);
+}
+body .main-info {
+  background-color: #fde4fe;
+}
+body .mContact .nav-link {
+  background-color: rgba(149, 49, 84, 0.6392156863);
+  border-color: #e59eb9;
+}
+body .mContact .nav-link:hover {
+  border-color: #953154;
+}
+body .mContact .nav-tabs {
+  border-bottom: 2px solid #953154;
+}
+body .mContact .nav-tabs .nav-link.active,
+body .mContact .nav-tabs .nav-item.show .nav-link {
+  background-color: #953154;
+  border-color: #e59eb9;
+}
+body .mContact #forms-nav {
+  background-color: #d9aebd;
+}
+body .mContact .dropdown-menu {
+  background-color: #fde4fe;
+  border: 1px solid rgba(149, 49, 84, 0.6392156863);
+  border-radius: 5px;
+}
+body .mContact .dropdown-menu form {
+  max-width: 19rem;
+}
+body .mContact .dropdown-menu form .btn:hover {
+  border-color: #953154;
+}
+body .mContact form .form-control::placeholder {
+  color: #953154;
+}
+body .mContact form .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(149, 49, 84, 0.3019607843);
+}
+body .mContact form .input-group-text {
+  background-color: rgba(149, 49, 84, 0.6392156863);
+  border: 1px solid #e59eb9;
+}
+body .mContact form label {
+  color: #953154;
+}
+body .mContact form input,
+body .mContact form select,
+body .mContact form textarea {
+  color: #953154;
+  background-color: #fff;
+  border-color: #e59eb9;
+  scrollbar-width: none;
+}
+body .mContact form textarea::-webkit-scrollbar {
+  display: none;
+}
+body .mContact form select:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0.2rem 0.25rem transparent;
+}
+body .mContact form [type=file]::file-selector-button {
+  background-color: rgba(149, 49, 84, 0.6392156863);
+  color: #fff;
+}
+body .mContact form .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: rgba(149, 49, 84, 0.6392156863);
+  border-color: #e59eb9;
+}
+body .mContact form textarea {
+  min-height: 75px;
+  max-height: 150px;
+}
+body .mContact form .btn {
+  background-color: rgba(149, 49, 84, 0.6392156863);
+  border-color: #e59eb9;
+  letter-spacing: 5px;
+}
+body .mContact form .btn:hover {
+  border-color: #fde4fe;
+}
+body .mContact form .btn:active {
+  background-color: rgba(149, 49, 84, 0.3019607843);
+  border-color: #fde4fe;
+}
+body aside {
+  color: #953154;
+  flex-basis: 250px;
+}
+body aside .carousel-item {
+  height: 210px;
+}
+body aside .side {
+  background-color: #d9aebd;
+  height: 680px;
+}
+body aside .side #coment {
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+body aside .side #coment::-webkit-scrollbar {
+  display: none;
+}
+body .modal .modal-header {
+  background-color: rgba(149, 49, 84, 0.6392156863);
+}
+body .modal .modal-header .btn-close {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+body .modal .modal-header .btn-close:focus {
+  box-shadow: 0 0 0 0.25rem #fde4fe;
+}
+body footer {
+  background-color: #953154;
+}
+body footer hr {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/*# sourceMappingURL=style.css.map */

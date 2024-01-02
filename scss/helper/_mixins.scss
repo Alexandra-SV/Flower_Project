@@ -1,0 +1,14 @@
+
+@mixin dimensions($width, $height){
+  width: $width;
+  height: $height;
+}
+@mixin photo-content($file) {
+    content: url(#{$file}.png);
+    object-fit: cover;
+}
+@mixin hover-color($color) {
+    &:hover{
+        color: $color;
+    }
+}

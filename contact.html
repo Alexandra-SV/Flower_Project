@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Flower</title>
+  <link rel="stylesheet" href="libs/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alexandria:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--Back to top button-->
+  <button type="button" class="btn btn-lg" id="btn-back-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#953154" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+    </svg>
+  </button>
+  <!--Sign up/in modals-->
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sign In</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Show a second modal and hide this one with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="inputPassword6" class="col-form-label">Password</label>
+            </div>
+            <div class="col-auto">
+              <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-auto">
+              <span id="passwordHelpInline" class="form-text">
+                Must be 8-20 characters long.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to Sign In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Header-->
+  <header class="py-2">
+    <!--Nav burger-->
+    <nav class="navbar navbar-expand-lg navbar-dark d-md-none nav-burger py-3" aria-label="Offcanvas navbar large">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header flex-column">
+            <button type="button" class="btn-close btn-close-white align-self-end py-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-nav" class="img-fluid offcanvas-title"></a>
+          </div>
+          <hr class="border border-3 border-white opacity-100 m-0">
+          <div class="offcanvas-body py-0">
+            <ul class="navbar-nav justify-content-evenly flex-grow-1 text-center fs-5 fw-semibold h-100">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li> -->
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Best Sellers</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Events</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Season</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Flowers</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Plants</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Artificial</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="border border-3 border-white opacity-100 m-0">
+          <div class="offcanvas-footer d-flex justify-content-around py-4 text-white fw-semibold fs-5 text-center">
+            <button class="nav-link link-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign In</button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>
+            <button class="nav-link link-light" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign Up</button>
+          </div>
+          <hr class="border border-3 border-white opacity-100 m-0">
+        </div>
+        <div class="mx-1 mobile-buttons">
+          <a href="#" class="p-1 text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+          </a>
+          <a href="#" class="p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!--End nav burger-->
+    <!--Header logo and nav computer-->
+    <div class="d-none d-md-flex row m-0 flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 offset-sm-4 text-center">
+        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-header" class="img-fluid"></a>
+      </div>
+      <!--TODO: Modal para buscar o que aparezca una barra de busqueda-->
+      <nav class="col-4 nav-header d-flex justify-content-end">
+        <div class="input-group">
+          <input type="text" class="form-control" aria-label="Search" aria-describedby="button-addon2">
+          <button class="btn" type="button" id="button-addon2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#953154" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+          </button>
+        </div>
+        <div class="my-2 mobile-buttons">
+          <a href="#" class="px-2 text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+            </svg>
+          </a>
+          <a href="#" class="px-2 text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <!--End header logo and nav computer-->
+  </header>
+  <!--White divider-->
+  <hr class="border border-3 border-white opacity-100 m-0">
+  <!--Computer navbar-->
+  <nav class="d-none d-md-flex justify-content-center py-2 nav-computer">
+    <ul class="nav nav-pills fw-semibold">
+      <!-- <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+        Best Sellers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Season</a>
+        <ul class="dropdown-menu">
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Winter</a></li>
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Spring</a></li>
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Summer</a></li>
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Autumn</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Flowers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Plants</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Artificial</a>
+      </li>
+    </ul>
+  </nav>
+  <!--End computer navbar-->
+  <!--Page Main Content -->
+  <div class="main-info text-dark-pink d-flex ">
+    <!--Main-->
+    <main class="mContact m-4 p-2 p-sm-3 flex-grow-1">
+      <div id="forms-nav" class=" mt-4 rounded-4">
+        <ul class="nav nav-tabs p-3" id="myTabs">
+          <li class="nav-item">
+            <a class="nav-link active text-white fs-4" id="tab1-tab" data-toggle="tab" href="#tab1">Inquiries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fs-4" id="tab2-tab" data-toggle="tab" href="#tab2">Complaints</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link dropdown-toggle text-white fs-4" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Comment here
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <form class="px-4 py-3 needs-validation" novalidate>
+                <div class="form-group my-2">
+                  <label for="dropdownUser" class="fw-bold form-label fs-5">User</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text text-white" id="basic-addon">@</span>
+                    <input type="text" class="form-control" id="dropdownUser" placeholder="User" aria-label="User name"
+                      pattern="[A-Za-z\s]+" required>
+                    <div class="invalid-feedback">
+                      Use a format that matches the one requested. ( a-zA-Z )
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group my-2">
+                  <label for="dropdownComment" class="fw-bold form-label fs-5">Comment</label>
+                  <textarea class="form-control" id="dropdownComment" placeholder="Comment" aria-label="Comment"
+                    pattern="[A-Za-z\s]+" required></textarea>
+                  <div class="invalid-feedback">
+                    Use a format that matches the one requested. ( a-zA-Z )
+                  </div>
+                </div>
+                <button type="submit" id="drButton" class="btn text-white ls-wide float-end">S E N D</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+        <div class="tab-content mt-2">
+          <!-- Tab 1 - Inquiries Form -->
+          <div class="tab-pane fade show active" id="tab1">
+            <form class="column mx-4 needs-validation" novalidate>
+              <div class="my-2  ">
+                <label for="fullName" class="fw-bold form-label fs-5">Full Name</label>
+                <input type="text" id="fullName" class="form-control" aria-label="Full Name" pattern="[A-Za-z\s]+"
+                  required>
+                <div class="invalid-feedback fs-5">
+                  Use a format that matches the one requested. ( a-zA-Z )
+                </div>
+              </div>
+              <div class="my-2">
+                <label for="email" class="fw-bold form-label fs-5">E-mail</label>
+                <div class="input-group mb-3 has-validation ">
+                  <span class="input-group-text text-white" id="basic-addon1">@</span>
+                  <input type="email" id="email" class="form-control" aria-label="Email" required>
+                  <div class="invalid-feedback fs-5">
+                    Use a format that matches the one requested. ( asd@ad.asd )
+                  </div>
+                </div>
+              </div>
+              <div class=" my-2 row selects">
+                <div class="col-12 col-md-7">
+                  <label for="CCAA" class="fw-bold form-label fs-5">Autonomous Community</label>
+                  <select name="CCAA" id="CCAA" class="form-select" aria-label="Autonomous Community"></select>
+                </div>
+                <div class="col-12 col-md-5 mt-2 mt-md-0">
+                  <label for="municipality" class="fw-bold form-label fs-5">Municipality</label>
+                  <select name="municipality" id="municipality" class="form-select" aria-label="Municipality"></select>
+                </div>
+              </div>
+              <div class="my-2">
+                <label for="Event" class="fw-bold form-label fs-5">Event *</label>
+                <select name="Event" id="Event" class="form-select" aria-label="Event" required></select>
+              </div>
+              <div class=" my-2">
+                <label for="date" class="fw-bold form-label fs-5">Date of the event *</label>
+                <input type="date" id="date" class="form-control" aria-label="Date of the event" required>
+              </div>
+              <div class=" my-2 ">
+                <label for="description" class="fw-bold form-label fs-5">Description of the event *</label>
+                <textarea id="description" class="form-control" aria-label="Description of the event"
+                  required></textarea>
+                <div class="invalid-feedback fs-5">
+                  You must fill out this section.
+                </div>
+              </div>
+              <hr>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                  aria-label="Agree to terms and conditions" required>
+                <label class="form-check-label form-label fs-5" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback ">
+                  You must agree before submitting.
+                </div>
+              </div>
+              <div class="d-flex flex-row flex-wrap">
+                <button type="reset" class="btn text-white col-12 col-md-3 my-2">RESET</button>
+                <button type="submit" class="btn text-white col-12 col-md-9 my-2">SEND</button>
+              </div>
+
+            </form>
+          </div>
+          <!-- Tab 2 - Complains Form -->
+          <div class="tab-pane fade" id="tab2">
+            <form class="column mx-4 needs-validation" novalidate>
+              <div class=" my-2 row">
+                <label class="fw-bold form-label fs-5">Customer Information *</label>
+                <div class="col-12 col-md-5 mt-2">
+                  <input type="text" id="incidentFullName" class="form-control" aria-label="Full Name"
+                    pattern="[A-Za-z\s]+" placeholder="Full name" required>
+                  <p class="invalid-feedback">
+                    Use a format that matches the one requested. ( a-zA-Z )
+                  </p>
+                </div>
+                <div class="col-12 col-md-7 mt-2">
+                  <div class="input-group mb-3 has-validation ">
+                    <span class="input-group-text text-white" id="basic-addon2">@</span>
+                    <input type="email" id="incidentEmail" class="form-control" aria-label="Email" placeholder="Email"
+                      required>
+                    <p class="invalid-feedback">
+                      Use a format that matches the one requested. ( asd@ad.asd )
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class=" my-2 row">
+                <div class="col-12 col-md-7">
+                  <label for="incident" class="fw-bold form-label fs-5">Nature of the Complaint *</label>
+                  <select name="incident" id="incident" class="form-select  mb-3"
+                    aria-label="Nature of the Complaint"></select>
+                </div>
+                <div class=" col-md-5">
+                  <label for="code" class="fw-bold form-label fs-5">Order Number *</label>
+                  <input type="text" id="code" class="form-control mb-3" aria-label="Order Number" placeholder="2Fd3D7"
+                    pattern="[A-Za-z1-9]+" required>
+                  <p class="invalid-feedback">
+                    Use a format that matches the one requested. ( a-zA-Z1-9 )
+                  </p>
+                </div>
+              </div>
+              <div class="my-2 row">
+                <div class="col-md-5">
+                  <label for="incidentD" class="fw-bold form-label fs-5">Date of Purchase*</label>
+                  <input type="date" id="incidentD" class="form-control mb-3" aria-label="Date of Purchase" required>
+                </div>
+                <div class="col-12 col-md-7">
+                  <label for="resolution" class="fw-bold form-label fs-5">Resolution Preferences</label>
+                  <select name="incident" id="resolution" class="form-select mb-3"
+                    aria-label="Resolution Preferences"></select>
+                </div>
+              </div>
+              <div class=" my-2">
+                <label for="Document" class="fw-bold form-label fs-5">Supporting Documents</label>
+                <input type="file" id="Document" aria-label="Supporting Documents" class="form-control mb-3">
+              </div>
+              <div class=" my-2 ">
+                <label for="incidentDescription" class="fw-bold form-label fs-5">Description of the incident *</label>
+                <textarea id="incidentDescription" class="form-control" aria-label="Description of the incident"
+                  required></textarea>
+                <p class="invalid-feedback">
+                  Please complete this section.
+                </p>
+              </div>
+              <hr>
+              <div class="d-flex flex-row flex-wrap">
+                <button type="reset" class="btn text-white col-12 col-md-3 my-2"
+                  aria-label="Reset button">RESET</button>
+                <button type="submit" class="btn text-white col-12 col-md-9 my-2"
+                  aria-label="Submit button">SEND</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--Main Ends-->
+    <!--Sidebar-->
+    <aside class="my-5 p-md-4 d-none d-md-block ">
+      <div class="side p-2 border rounded-4">
+        <!--Carousel-->
+        <h4 class="fw-bold mb-2">Flower Specials</h4>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#modal1">
+              <img src="imgs/Specials/deal1.jpg" class="d-block w-100 h-100 rounded-3" alt="bouquet 1">
+            </div>
+            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#modal2">
+              <img src="imgs/Specials/deal2.jpg" class="d-block w-100 h-100 rounded-3" alt="bouquet 2">
+            </div>
+            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#modal3">
+              <img src="imgs/Specials/deal3.jpg" class="d-block w-100 h-100 rounded-3" alt="bouquet 3">
+            </div>
+            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#modal4">
+              <img src="imgs/Specials/deal4.jpg" class="d-block w-100 h-100 rounded-3" alt="bouquet 4">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!--Carousel Ends-->
+        <!--Modals-->
+        <div class="modal" tabindex="-1" id="modal1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-white fw-bold fs-3">Pink Blush Elegance Bouquet </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="fs-4">A sophisticated arrangement featuring various shades of pink blooms,
+                  exuding grace and timeless elegance.
+                </p>
+                <span class="fw-bold my-2 float-end fs-5">Special Offer: 39.99€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal" tabindex="-1" id="modal2">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-white fw-bold  fs-4">Earthy Tones Harmony Bouquet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="fs-5">Experience the warmth of nature with a harmonious blend of rich browns,
+                  deep oranges, and subtle greens, creating a rustic and comforting arrangement.
+                </p>
+                <span class="fw-bold my-2 float-end">Special Offer: 44.99€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal" tabindex="-1" id="modal3">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-white fw-bold fs-4">Soft Petal Serenity Bouquet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="fs-5">Indulge in tranquility with delicate pastel flowers,
+                  evoking a sense of calm and serenity for a gentle and peaceful ambiance.
+                </p>
+                <span class="fw-bold my-2 float-end">Special Offer: 37.99€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal" tabindex="-1" id="modal4">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-white fw-bold fs-4">Citrus Glow Delight Bouquet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="fs-5">Bask in vibrant energy with a burst of citrusy orange,
+                  combining bright blooms to add a pop of joy and delight to any occasion.
+                </p>
+                <span class="fw-bold my-2 float-end">Special Offer: 42.99€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modals Ends-->
+        <!--Comments-->
+        <h4 class="fw-bold mt-3">Comments</h4>
+        <div id="coment" class="d-flex h-50 flex-wrap"></div> <!--fills with js-->
+        <!--Comments Ends-->
+      </div>
+    </aside>
+    <!--Sidebar Ends-->
+    <!--Toasts-->
+    <!--TODO: Make functional Toasts-->
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+      <!-- Position it: -->
+      <!-- - `.toast-container` for spacing between toasts -->
+      <!-- - `top-0` & `end-0` to position the toasts in the upper right corner -->
+      <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
+      <div class="toast-container top-0 end-0 p-3">
+        <!-- Then put toasts within -->
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="imgs/logo.png" class="rounded me-2" alt=".Logo">
+            <strong class="me-auto">Follow Us</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            <p><i class="bi bi-instagram"></i><span class="pl-2">Instagram</span></p>
+            <p><i class="bi bi-twitter-x"></i><span class="pl-2">Twitter-x</span></p>
+            <p><i class="bi bi-facebook"></i><span class="pl-2">Facebook</span></p>
+          </div>
+        </div>
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="imgs/logo.png" class="rounded me-2" alt="Logo">
+            <strong class="me-auto">Call Us</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            <p><i class="bi bi-phone"></i><span class="pl-2">34+ 961 15 16 17</span></p>
+            <p><i class="bi bi-telephone"></i><span class="pl-2">34+ 619 15 16 17</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Toast Ends-->
+  </div>
+  <!--Page Main Content Ends-->
+  <hr class="border border-3 border-white opacity-100 m-0">
+  <footer class="py-3 my-0">
+    <ul class="nav justify-content-center">
+      <li class="nav-item"><a href="#" class="nav-link px-2 link-light">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 link-light">Contact</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 link-light">Locations</a></li>
+    </ul>
+    <hr class="border-white">
+    <p class="text-center text-white small">&copy; 2023 Flower, Inc - All rights reserved.</p>
+  </footer>
+</body>
+<!--Bootstrap js-->
+  <script src="libs/js/bootstrap.bundle.js"></script>
+  <!-- For dropdown functionality -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!--Our js-->
+ <script src="js/index.js"></script>
+ <script src="js/contact_form.js"></script>
+</html>

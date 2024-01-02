@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Flower</title>
+  <!--STYLES-->
+  <link rel="stylesheet" href="libs/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alexandria:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--BACK TO TOP BUTTON-->
+  <button type="button" class="btn btn-lg" id="btn-back-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#953154" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+    </svg>
+  </button>
+  <!--END BACK TO TOP BUTTON-->
+  <!--SIGN IN MODAL-->
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sign In</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--SIGN IN FORM-->
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+          <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+          <hr class="my-4">
+          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#google"></use></svg>
+            Sign up with Google
+          </button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+            Sign up with Facebook
+          </button>
+        </div>
+        <div class="modal-footer">
+          <small class="text-body-secondary">Don't have an account?</small>
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END SIGN IN MODAL-->
+  <!--SIGN UP MODAL-->
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--SIGN UP FORM-->
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">City</label>
+              <input type="text" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom04" class="form-label">State</label>
+              <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid state.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom05" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="validationCustom05" required>
+              <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Create an account</button>
+            </div>
+          </form>
+          <!--END SIGN UP FORM-->
+        </div>
+        <div class="modal-footer">
+          <small class="text-body-secondary">Have an account?</small>
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END SIGN UP MODAL-->
+  <!--HEADER-->
+  <header class="py-2">
+    <!--Nav burger-->
+    <nav class="navbar navbar-expand-lg navbar-dark d-md-none nav-burger py-3" aria-label="Offcanvas navbar large">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header flex-column">
+            <button type="button" class="btn-close btn-close-white align-self-end py-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-nav" class="img-fluid offcanvas-title"></a>
+          </div>
+          <hr class="border border-3 border-white opacity-100 m-0">
+          <div class="offcanvas-body py-0">
+            <ul class="navbar-nav justify-content-evenly flex-grow-1 text-center fs-5 fw-semibold h-100">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li> -->
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Best Sellers</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Events</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Season</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Flowers</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Plants</a>
+              </li>
+              <li class="nav-item m-0">
+                <a class="nav-link" href="#">Artificial</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="border border-3 border-white opacity-100 m-0">
+          <div class="offcanvas-footer d-flex justify-content-around py-4 text-white fw-semibold fs-5 text-center">
+            <button class="nav-link link-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign In</button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>
+            <button class="nav-link link-light" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign Up</button>
+          </div>
+          <hr class="border border-3 border-white opacity-100 m-0">
+        </div>
+        <div class="mx-1 mobile-buttons">
+          <a href="#" class="p-1 text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+          </a>
+          <a href="#" class="p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!--End nav burger-->
+    <!--Header logo and nav computer-->
+    <div class="d-none d-md-flex row m-0 flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 offset-sm-4 text-center">
+        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-header" class="img-fluid"></a>
+      </div>
+      <!--TODO: Modal para buscar o que aparezca una barra de busqueda-->
+      <nav class="col-4 nav-header d-flex justify-content-end">
+        <div class="input-group">
+          <input type="text" class="form-control" aria-label="Search" aria-describedby="button-addon2">
+          <button class="btn" type="button" id="button-addon2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#953154" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+          </button>
+        </div>
+        <div class="my-2 mobile-buttons">
+          <a href="#" class="px-2 text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+            </svg>
+          </a>
+          <a href="#" class="px-2 text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <!--End header logo and nav computer-->
+  </header>
+  <!--END HEADER-->
+  <hr class="border border-3 border-white opacity-100 m-0">
+  <!--DESKTOP NAV-->
+  <nav class="d-none d-md-flex justify-content-center py-2 nav-computer">
+    <ul class="nav nav-pills fw-semibold">
+      <!-- <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+        Best Sellers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Season</a>
+        <ul class="dropdown-menu">
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Winter</a></li>
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Spring</a></li>
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Summer</a></li>
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Autumn</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Flowers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Plants</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Artificial</a>
+      </li>
+    </ul>
+  </nav>
+  <!--END DESKTOP NAV-->
+  <!--MAIN-->
+  <main >
+    <section class="container my-4 w-75">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner px-3">
+          <div class="carousel-item active">
+            <div class="text-center m-5">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <a href="#" class="text-decoration-none">
+                    <img class="w-75" src="imgs/Flowers/camellia.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <div class="carousel-caption position-relative pe-md-5 mt-5">
+                    <h2>Camellia</h2>
+                    <p class="d-none d-md-block fs-5">Queens of the winter flowers, Camellias are attractive evergreen shrubs that are highly prized for the beauty of their exquisite blooms, their splendid evergreen foliage, and their compact shapely habit. <a href="#">Read more...</a></p>
+                  </div><!--enddetails-->
+                </div><!--endcol-->
+              </div><!--endrow-->
+            </div><!--endcontainer-->
+          </div><!--endcarousel-item-->
+          <div class="carousel-item">
+            <div class="text-center m-5">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <a href="#" class="text-decoration-none">
+                    <img class="w-75" src="imgs/Flowers/gardenia.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <div class="carousel-caption position-relative pe-md-5 mt-5">
+                    <h2>Gardenia</h2>
+                    <p class="d-none d-md-block fs-5">Beloved for their intoxicating fragrance and attractive, waxy, creamy-white flowers contrasting beautifully with their shiny, leathery, dark green leaves, Gardenias are irresistible heat-loving evergreen shrubs or trees. <a href="#">Read more...</a></p>
+                  </div><!--enddetails-->
+                </div><!--endcol-->
+              </div><!--endrow-->
+            </div><!--endcontainer-->
+          </div><!--endcarousel-item-->
+          <div class="carousel-item">
+            <div class="text-center m-5">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <a href="#" class="text-decoration-none">
+                    <img class="w-75" src="imgs/Flowers/hellebore.png" alt="">
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <div class="carousel-caption position-relative pe-md-5 mt-5">
+                    <h2>Hellebore</h2>
+                    <p class="d-none d-md-block fs-5">Hellebores are classic plants for winter interest, with elegant, nodding blooms in shades of green, white, pink or ruby. <a href="#">Read more...</a></p>
+                  </div><!--enddetails-->
+                </div><!--endcol-->
+              </div><!--endrow-->
+            </div><!--endcontainer-->
+          </div><!--endcarousel-item-->
+        </div>
+        <button class="carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next justify-content-end" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section class="py-4 my-4 rounded-0 fw-bold">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-6 col-md-4 p-2">
+            <img src="imgs/Events/weddings.png" alt="" class="img-fluid rounded-circle shadow">
+            <p>Weddings</p>
+          </div>
+          <div class="col-6 col-md-4 p-2">
+            <img src="imgs/Events/banquets.png" alt="" class="img-fluid rounded-circle shadow">
+            <p>Banquets</p>
+          </div>
+          <div class="col-6 col-md-4 p-2">
+            <img src="imgs/Events/funerals.png" alt="" class="img-fluid rounded-circle shadow">
+            <p>Funerals</p>
+          </div>
+          <div class="col-6 col-md-4 p-2">
+            <img src="imgs/Events/office.png" alt="" class="img-fluid rounded-circle shadow">
+            <p>Office</p>
+          </div>
+          <div class="col-6 col-md-4 p-2">
+            <img src="imgs/Events/holidays.png" alt="" class="img-fluid rounded-circle shadow">
+            <p>Holidays</p>
+          </div>
+          <div class="col-6 col-md-4 p-2">
+            <img src="imgs/Events/parties.png" alt="" class="img-fluid rounded-circle shadow">
+            <p>Parties</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--END MAIN-->
+  <hr class="border border-3 border-white opacity-100 m-0">
+  <!--FOOTER-->
+  <footer class="py-3 my-0">
+    <ul class="nav justify-content-center">
+      <li class="nav-item"><a href="#" class="nav-link px-2 link-light">About</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link px-2 link-light">Contact</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 link-light">Locations</a></li>
+    </ul>
+    <hr class="border-white">
+    <p class="text-center text-white small">&copy; 2023 Flower, Inc - All rights reserved.</p>
+  </footer>
+  <!--END FOOTER-->
+</body>
+<!--BOOTSTRAP JS-->
+  <script src="libs/js/bootstrap.bundle.js"></script>
+<!--CUSTOM JS-->
+  <script src="js/index.js"></script>
+</html>

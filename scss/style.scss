@@ -1,0 +1,251 @@
+@import "helper/variables";
+@import "helper/placeholders";
+@import "helper/mixins";
+
+body {
+    background-color: $light-pink;
+    font-family: $alexandria;
+    /*Index SCSS*/
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        svg{
+            background-color: $light-pink;
+            border: 5px solid $light-pink;
+            border-radius: 100px;
+        }
+        &:active{
+            border: 0px solid;
+        }
+    }
+    header{
+        background-color: $dark-pink;
+        .nav-header .input-group{
+            width: 150px;
+            background-color: white;
+            border-radius: 100px;
+            button:active{
+                border: 0px solid;
+            }
+            .form-control{
+                border-radius: 100px;
+                border: none;
+                color: $dark-pink;
+                &:focus{
+                    box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
+                }
+            }
+        }
+        .nav-burger{
+            .offcanvas-header, .offcanvas-footer{
+                background-color: $dark-pink;
+            }
+            .offcanvas-body{
+                background-color: $bubblegum-pink;
+                ul{
+                    .nav-item{
+                        margin: 30px 0px 0px 30px;
+                        a{
+                            color: $dark-pink;
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            .input-group{
+                background-color: white;
+                border-radius: 100px;
+                width: 100%;
+                input{
+                    border-radius: 100px;
+                    border: none;
+                    color: $dark-pink;
+                }
+            }
+            div .navbar-toggler{
+                border: none;
+                &:focus{
+                    box-shadow: 0 0 0 0 rgba(229, 158, 185, 0.25);
+                }
+            }
+            .offcanvas{
+                transition: transform 0.3s ease-in-out;
+                .offcanvas-header .btn-close:focus{
+                    box-shadow: 0 0 0 0 rgba(229, 158, 185, 0.25);
+                }
+            }
+        }
+    }
+    .nav-computer{
+        background-color: $bubblegum-pink;
+        .nav-pills li{
+            a{
+                color: $dark-pink;
+                margin: 0px 10px 0px 10px;
+                &:hover{
+                    color: white;
+                }
+            }
+            ul{
+                background-color: $bubblegum-pink;
+                border-radius: 0px;
+                border: none;
+                li a{
+                    color: $dark-pink;
+                    &:hover{
+                        background-color: $dark-pink;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        section{
+            background-color: $dusty-pink;
+            border-radius: 20px;
+            /*SECTION 1*/
+            #carouselExampleCaptions{
+                .carousel-indicators button{
+                    background-color: $dark-pink;
+                }
+                img{
+                    max-height: 300px;
+                }
+                .carousel-caption{
+                    a{
+
+                    color: $dark-pink;
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                    color: $dark-pink;
+                    right: 0;
+                    left: 0;
+                }
+                button span{
+                    background-color: $dark-pink;
+                    border-radius: 10px;
+                }
+            }
+            /*SECTION 2*/
+            .container{
+                .col-6{
+                    transition: transform .2s;
+                    color: $dark-pink;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    /*Contact SCSS*/
+    .main-info{background-color: $light-pink;}
+    .mContact {
+        .nav-link {
+            background-color: $old-dusty-pink ;
+            border-color: $bubblegum-pink ;
+        }
+        .nav-link:hover {border-color: $dark-pink;}
+        .nav-tabs{border-bottom: 2px solid $dark-pink}
+        .nav-tabs .nav-link.active,
+        .nav-tabs .nav-item.show .nav-link {
+            background-color: $dark-pink;
+            border-color: $bubblegum-pink;
+        }
+        #forms-nav {background-color: $dusty-pink;}
+        .dropdown-menu {
+            background-color: $light-pink;
+            border: 1px solid $old-dusty-pink ;
+            border-radius: 5px;
+            form{max-width: 19rem;
+                .btn:hover{border-color: $dark-pink;}
+            }
+        }
+        form {
+            .form-control::placeholder {color: $dark-pink;}
+            .form-control:focus {box-shadow: 0 0 0 0.25rem $dusty-pink-transparent;}
+            .input-group-text {
+                background-color: $old-dusty-pink;
+                border: 1px solid $bubblegum-pink;
+            }
+            label {color: $dark-pink;}
+            input,
+            select,
+            textarea {
+                color: $dark-pink;
+                background-color: #fff;
+                border-color: $bubblegum-pink;
+                scrollbar-width: none;// for firefox
+            }
+            textarea::-webkit-scrollbar {display: none;}// for chrome
+            select:focus {
+                border-color: transparent;
+                box-shadow: 0 0 0.2rem 0.25rem transparent;
+            }
+            // compatible with firefox y chrome
+            [type="file"]::file-selector-button {
+                background-color: $old-dusty-pink;
+                color: #fff;
+            }
+            .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+                background-color: $old-dusty-pink;
+                border-color: $bubblegum-pink;
+            }
+            textarea {
+                min-height: 75px;
+                max-height: 150px;
+            }
+            .btn {
+                background-color: $old-dusty-pink;
+                border-color: $bubblegum-pink ;
+                letter-spacing: 5px;
+                &:hover{border-color: $light-pink;}
+                &:active{//for chrome
+                    background-color: $dusty-pink-transparent;
+                    border-color: $light-pink;
+                }
+            }
+
+        }
+    }
+    aside {
+        color: $dark-pink;
+        flex-basis: 250px;
+        .carousel-item{height: 210px;}
+        .side {
+            background-color: $dusty-pink;
+            height: 680px;
+            #coment{
+                overflow-y: auto;
+
+                //hide scrollbar
+                scrollbar-width: none;//for firefox
+                &::-webkit-scrollbar {display: none;}//for chrome
+            }
+        }
+    }
+    .modal{
+        .modal-header{
+            background-color: $old-dusty-pink;
+            .btn-close{background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+            }
+            .btn-close:focus{
+                box-shadow:0 0 0 0.25rem $light-pink}
+        }
+
+    }
+    footer{
+        background-color: $dark-pink;
+        hr{
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+    }
+}
+
