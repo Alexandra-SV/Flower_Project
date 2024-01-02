@@ -28,7 +28,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sign In</h1>
+          <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">Sign In</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -45,11 +45,11 @@
           <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
           <hr class="my-4">
           <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+          <button class="w-100 py-2 mb-2 btn rounded-3" type="submit">
             <svg class="bi me-1" width="16" height="16"><use xlink:href="#google"></use></svg>
             Sign up with Google
           </button>
-          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+          <button class="w-100 py-2 mb-2 btn rounded-3" type="submit">
             <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
             Sign up with Facebook
           </button>
@@ -67,7 +67,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+          <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel2">Sign Up</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -75,14 +75,14 @@
           <form class="row g-3 needs-validation" novalidate>
             <div class="col-md-4">
               <label for="validationCustom01" class="form-label">First name</label>
-              <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+              <input type="text" class="form-control" id="validationCustom01" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
             </div>
             <div class="col-md-4">
               <label for="validationCustom02" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+              <input type="text" class="form-control" id="validationCustom02" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -108,6 +108,10 @@
               <label for="validationCustom04" class="form-label">State</label>
               <select class="form-select" id="validationCustom04" required>
                 <option selected disabled value="">Choose...</option>
+                <option>...</option>
+                <option>...</option>
+                <option>...</option>
+                <option>...</option>
                 <option>...</option>
               </select>
               <div class="invalid-feedback">
@@ -246,7 +250,7 @@
   <!--END HEADER-->
   <hr class="border border-3 border-white opacity-100 m-0">
   <!--DESKTOP NAV-->
-  <nav class="d-none d-md-flex justify-content-center py-2 nav-computer">
+  <nav class="d-none d-md-flex justify-content-center py-2 nav-desktop">
     <ul class="nav nav-pills fw-semibold">
       <!-- <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li> -->
       <li class="nav-item">
@@ -353,7 +357,7 @@
       <div class="container">
         <div class="row text-center">
           <div class="col-6 col-md-4 p-2">
-            <a href="wedding.html"><img src="imgs/Events/weddings.png" alt="" class="img-fluid rounded-circle shadow"></a> 
+            <a href="wedding.html"><img src="imgs/Events/weddings.png" alt="" class="img-fluid rounded-circle shadow"></a>
             <p>Weddings</p>
           </div>
           <div class="col-6 col-md-4 p-2">
@@ -397,5 +401,6 @@
 <!--BOOTSTRAP JS-->
   <script src="libs/js/bootstrap.bundle.js"></script>
 <!--CUSTOM JS-->
-  <script src="js/index.js"></script>
+  <script src="js/flower.js"></script>
+  <!-- <script src="js/index.js"></script> -->
 </html>

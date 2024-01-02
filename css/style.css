@@ -3,9 +3,19 @@
 body {
   background-color: #fde4fe;
   font-family: "Alexandria", serif;
-  /*Index SCSS*/
-  /*Contact & Weeding SCSS*/
-  /*Contact SCSS*/
+  /*Back to top button*/
+  /*Sign in/out modals*/
+  /*Header*/
+  /*Desktop navbar*/
+  /*Index Main*/
+  /*Contact Main*/
+  /*Cookie Modal*/
+  /*Contact & Wedding Forms*/
+  /*Contact Aside*/
+  /*Contact Modal*/
+  /*Contact Toast*/
+  /*Contact toast & modal close buttons*/
+  /*Footer*/
 }
 body #btn-back-to-top {
   position: fixed;
@@ -20,6 +30,40 @@ body #btn-back-to-top svg {
 }
 body #btn-back-to-top:active {
   border: 0px solid;
+}
+body .modal .modal-header {
+  background-color: #953154;
+  color: white;
+}
+body .modal .modal-body input, body .modal .modal-body h2, body .modal .modal-body select {
+  color: #953154;
+}
+body .modal .modal-body input[type=checkbox]:checked, body .modal .modal-body h2[type=checkbox]:checked, body .modal .modal-body select[type=checkbox]:checked {
+  background-color: #953154;
+  border-color: #953154;
+  box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
+}
+body .modal .modal-body input:focus, body .modal .modal-body h2:focus, body .modal .modal-body select:focus {
+  border-color: #953154;
+  box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
+}
+body .modal .modal-body button {
+  background-color: #953154;
+  border-color: #953154;
+  color: white;
+}
+body .modal .modal-body button:hover {
+  background-color: #e59eb9;
+  color: #953154;
+}
+body .modal .modal-footer button {
+  background-color: #953154;
+  border-color: #953154;
+  color: white;
+}
+body .modal .modal-footer button:hover {
+  background-color: #e59eb9;
+  color: #953154;
 }
 body header {
   background-color: #953154;
@@ -78,29 +122,29 @@ body header .nav-burger .offcanvas {
 body header .nav-burger .offcanvas .offcanvas-header .btn-close:focus {
   box-shadow: 0 0 0 0 rgba(229, 158, 185, 0.25);
 }
-body .nav-computer {
+body .nav-desktop {
   background-color: #e59eb9;
 }
-body .nav-computer .nav-pills li a {
+body .nav-desktop .nav-pills li a {
   color: #953154;
   margin: 0px 10px 0px 10px;
 }
-body .nav-computer .nav-pills li a:hover {
+body .nav-desktop .nav-pills li a:hover {
   color: white;
 }
-body .nav-computer .nav-pills li ul {
+body .nav-desktop .nav-pills li ul {
   background-color: #e59eb9;
   border-radius: 0px;
   border: none;
 }
-body .nav-computer .nav-pills li ul li a {
+body .nav-desktop .nav-pills li ul li a {
   color: #953154;
 }
-body .nav-computer .nav-pills li ul li a:hover {
+body .nav-desktop .nav-pills li ul li a:hover {
   background-color: #953154;
 }
 body main {
-  /* Weeding SCSS */
+  /*Wedding Banner Section*/
 }
 body main section {
   background-color: #d9aebd;
@@ -163,30 +207,6 @@ body main #wedding-section div span {
   font-family: "Aboreto", serif;
   letter-spacing: 5px;
   text-align: center;
-}
-body #cookie hr, body #cookie a, body #cookie label {
-  color: #953154;
-}
-body #cookie form .form-check-input {
-  border-color: #953154;
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23953154'/%3e%3c/svg%3e");
-}
-body #cookie form .form-check-input:checked {
-  background-color: #953154;
-  border-color: #e59eb9;
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-}
-body .mContact form .btn, body #cookie form .btn {
-  background-color: rgba(149, 49, 84, 0.6392156863);
-  border-color: #e59eb9;
-  letter-spacing: 5px;
-}
-body .mContact form .btn:hover, body #cookie form .btn:hover {
-  border-color: #fde4fe;
-}
-body .mContact form .btn:active, body #cookie form .btn:active {
-  background-color: rgba(149, 49, 84, 0.3960784314);
-  border-color: #fde4fe;
 }
 body .mContact .nav-link {
   background-color: rgba(149, 49, 84, 0.6392156863);
@@ -256,6 +276,30 @@ body .mContact form .form-control:hover:not(:disabled):not([readonly])::file-sel
 body .mContact form textarea {
   min-height: 75px;
   max-height: 150px;
+}
+body #cookie hr, body #cookie a, body #cookie label {
+  color: #953154;
+}
+body #cookie form .form-check-input {
+  border-color: #953154;
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23953154'/%3e%3c/svg%3e");
+}
+body #cookie form .form-check-input:checked {
+  background-color: #953154;
+  border-color: #e59eb9;
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+body .mContact form .btn, body #cookie form .btn {
+  background-color: rgba(149, 49, 84, 0.6392156863);
+  border-color: #e59eb9;
+  letter-spacing: 5px;
+}
+body .mContact form .btn:hover, body #cookie form .btn:hover {
+  border-color: #fde4fe;
+}
+body .mContact form .btn:active, body #cookie form .btn:active {
+  background-color: rgba(149, 49, 84, 0.3960784314);
+  border-color: #fde4fe;
 }
 body aside {
   color: #953154;
