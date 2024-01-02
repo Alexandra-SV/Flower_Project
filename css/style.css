@@ -176,6 +176,10 @@ body #cookie form .form-check-input:checked {
   border-color: #e59eb9;
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
+body #cookie .custom-tooltip {
+  background-color: rgba(149, 49, 84, 0.6392156863);
+  color: #fff;
+}
 body .mContact form .btn, body #cookie form .btn {
   background-color: rgba(149, 49, 84, 0.6392156863);
   border-color: #e59eb9;
