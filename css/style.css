@@ -4,6 +4,7 @@ body {
   background-color: #fde4fe;
   font-family: "Alexandria", serif;
   /*Index SCSS*/
+  /*Contact & Weeding SCSS*/
   /*Contact SCSS*/
 }
 body #btn-back-to-top {
@@ -39,7 +40,8 @@ body header .nav-header .input-group .form-control {
 body header .nav-header .input-group .form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
 }
-body header .nav-burger .offcanvas-header, body header .nav-burger .offcanvas-footer {
+body header .nav-burger .offcanvas-header,
+body header .nav-burger .offcanvas-footer {
   background-color: #953154;
 }
 body header .nav-burger .offcanvas-body {
@@ -97,6 +99,9 @@ body .nav-computer .nav-pills li ul li a {
 body .nav-computer .nav-pills li ul li a:hover {
   background-color: #953154;
 }
+body main {
+  /* Weeding SCSS */
+}
 body main section {
   background-color: #d9aebd;
   border-radius: 20px;
@@ -131,8 +136,57 @@ body main section .container .col-6 {
 body main section .container .col-6:hover {
   transform: scale(1.1);
 }
-body .main-info {
-  background-color: #fde4fe;
+body main #wedding-section {
+  background-image: url(../imgs/Weddings/weddingBanner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  min-height: 100px;
+}
+@media (min-width: 768px) {
+  body main #wedding-section {
+    min-height: 500px;
+  }
+}
+body main #wedding-section div {
+  background-color: rgba(229, 158, 185, 0.6901960784);
+  max-width: 400px;
+  min-height: 100px;
+}
+@media (min-width: 768px) {
+  body main #wedding-section div {
+    margin-top: 180px;
+  }
+}
+body main #wedding-section div span {
+  font-family: "Aboreto", serif;
+  letter-spacing: 5px;
+  text-align: center;
+}
+body #cookie hr, body #cookie a, body #cookie label {
+  color: #953154;
+}
+body #cookie form .form-check-input {
+  border-color: #953154;
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23953154'/%3e%3c/svg%3e");
+}
+body #cookie form .form-check-input:checked {
+  background-color: #953154;
+  border-color: #e59eb9;
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+body .mContact form .btn, body #cookie form .btn {
+  background-color: rgba(149, 49, 84, 0.6392156863);
+  border-color: #e59eb9;
+  letter-spacing: 5px;
+}
+body .mContact form .btn:hover, body #cookie form .btn:hover {
+  border-color: #fde4fe;
+}
+body .mContact form .btn:active, body #cookie form .btn:active {
+  background-color: rgba(149, 49, 84, 0.3960784314);
+  border-color: #fde4fe;
 }
 body .mContact .nav-link {
   background-color: rgba(149, 49, 84, 0.6392156863);
@@ -167,7 +221,7 @@ body .mContact form .form-control::placeholder {
   color: #953154;
 }
 body .mContact form .form-control:focus {
-  box-shadow: 0 0 0 0.25rem rgba(149, 49, 84, 0.3019607843);
+  box-shadow: 0 0 0 0.25rem rgba(149, 49, 84, 0.3960784314);
 }
 body .mContact form .input-group-text {
   background-color: rgba(149, 49, 84, 0.6392156863);
@@ -203,18 +257,6 @@ body .mContact form textarea {
   min-height: 75px;
   max-height: 150px;
 }
-body .mContact form .btn {
-  background-color: rgba(149, 49, 84, 0.6392156863);
-  border-color: #e59eb9;
-  letter-spacing: 5px;
-}
-body .mContact form .btn:hover {
-  border-color: #fde4fe;
-}
-body .mContact form .btn:active {
-  background-color: rgba(149, 49, 84, 0.3019607843);
-  border-color: #fde4fe;
-}
 body aside {
   color: #953154;
   flex-basis: 250px;
@@ -233,14 +275,31 @@ body aside .side #coment {
 body aside .side #coment::-webkit-scrollbar {
   display: none;
 }
-body .modal .modal-header {
+body .modal-header {
   background-color: rgba(149, 49, 84, 0.6392156863);
 }
-body .modal .modal-header .btn-close {
-  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+body .toast .toast-header {
+  background-color: #953154;
 }
-body .modal .modal-header .btn-close:focus {
+body .toast .toast-header img {
+  max-width: 130px;
+}
+body .toast .toast-body {
+  background-color: #d9aebd;
+}
+body .toast .toast-body span {
+  color: #953154;
+}
+body .toast .toast-body svg {
+  color: #953154;
+  width: 30px;
+  height: 30px;
+}
+body .toast .btn-close:focus, body .modal .btn-close:focus {
   box-shadow: 0 0 0 0.25rem #fde4fe;
+}
+body .toast .btn-close, body .modal .btn-close {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
 }
 body footer {
   background-color: #953154;

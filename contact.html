@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Flower</title>
+  <title>Contact section</title>
   <link rel="stylesheet" href="libs/css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <!--Fonts-->
@@ -12,17 +13,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alexandria:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alexandria:wght@300&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <!--Back to top button-->
   <button type="button" class="btn btn-lg" id="btn-back-to-top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#953154" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#953154" class="bi bi-arrow-up-circle-fill"
+      viewBox="0 0 16 16">
+      <path
+        d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
     </svg>
   </button>
   <!--Sign up/in modals-->
-  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -38,7 +44,8 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -65,7 +72,8 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to Sign In</button>
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to Sign
+            In</button>
         </div>
       </div>
     </div>
@@ -75,15 +83,21 @@
     <!--Nav burger-->
     <nav class="navbar navbar-expand-lg navbar-dark d-md-none nav-burger py-3" aria-label="Offcanvas navbar large">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
           </svg>
         </button>
-        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
           <div class="offcanvas-header flex-column">
-            <button type="button" class="btn-close btn-close-white align-self-end py-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-nav" class="img-fluid offcanvas-title"></a>
+            <button type="button" class="btn-close btn-close-white align-self-end py-2" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img
+                src="imgs/logo.png" alt="flower-logo" id="logo-nav" class="img-fluid offcanvas-title"></a>
           </div>
           <hr class="border border-3 border-white opacity-100 m-0">
           <div class="offcanvas-body py-0">
@@ -113,23 +127,30 @@
           </div>
           <hr class="border border-3 border-white opacity-100 m-0">
           <div class="offcanvas-footer d-flex justify-content-around py-4 text-white fw-semibold fs-5 text-center">
-            <button class="nav-link link-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign In</button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
-              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            <button class="nav-link link-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign
+              In</button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-person-fill"
+              viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
             </svg>
-            <button class="nav-link link-light" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign Up</button>
+            <button class="nav-link link-light" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign
+              Up</button>
           </div>
           <hr class="border border-3 border-white opacity-100 m-0">
         </div>
         <div class="mx-1 mobile-buttons">
           <a href="#" class="p-1 text-decoration-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search"
+              viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
             </svg>
           </a>
           <a href="#" class="p-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
-              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
             </svg>
           </a>
         </div>
@@ -139,27 +160,33 @@
     <!--Header logo and nav computer-->
     <div class="d-none d-md-flex row m-0 flex-nowrap justify-content-between align-items-center">
       <div class="col-4 offset-sm-4 text-center">
-        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-header" class="img-fluid"></a>
+        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png"
+            alt="flower-logo" id="logo-header" class="img-fluid"></a>
       </div>
       <!--TODO: Modal para buscar o que aparezca una barra de busqueda-->
       <nav class="col-4 nav-header d-flex justify-content-end">
         <div class="input-group">
           <input type="text" class="form-control" aria-label="Search" aria-describedby="button-addon2">
           <button class="btn" type="button" id="button-addon2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#953154" class="bi bi-search" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#953154" class="bi bi-search"
+              viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
             </svg>
           </button>
         </div>
         <div class="my-2 mobile-buttons">
           <a href="#" class="px-2 text-decoration-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
-              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
             </svg>
           </a>
           <a href="#" class="px-2 text-decoration-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
-              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person-fill"
+              viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
             </svg>
           </a>
         </div>
@@ -175,13 +202,14 @@
       <!-- <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li> -->
       <li class="nav-item">
         <a class="nav-link" href="#">
-        Best Sellers</a>
+          Best Sellers</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Events</a>
       </li>
       <li class="nav-item">
-        <a class="btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Season</a>
+        <a class="btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">Season</a>
         <ul class="dropdown-menu">
           <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Winter</a></li>
           <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Spring</a></li>
@@ -248,8 +276,8 @@
           <!-- Tab 1 - Inquiries Form -->
           <div class="tab-pane fade show active" id="tab1">
             <form class="column mx-4 needs-validation" novalidate>
-              <div class="my-2  ">
-                <label for="fullName" class="fw-bold form-label fs-5">Full Name</label>
+              <div class="my-2">
+                <label for="fullName" class="form-label fw-bold fs-5">Full Name</label>
                 <input type="text" id="fullName" class="form-control" aria-label="Full Name" pattern="[A-Za-z\s]+"
                   required>
                 <div class="invalid-feedback fs-5">
@@ -266,26 +294,26 @@
                   </div>
                 </div>
               </div>
-              <div class=" my-2 row selects">
-                <div class="col-12 col-md-7">
+              <div class="row my-2">
+                <div class="col-12 col-md-6">
                   <label for="CCAA" class="fw-bold form-label fs-5">Autonomous Community</label>
                   <select name="CCAA" id="CCAA" class="form-select" aria-label="Autonomous Community"></select>
                 </div>
-                <div class="col-12 col-md-5 mt-2 mt-md-0">
-                  <label for="municipality" class="fw-bold form-label fs-5">Municipality</label>
+                <div class=" col-12 col-md-5 mt-2 mt-md-0">
+                  <label for="municipality" class="form-label fw-bold fs-5">Municipality</label>
                   <select name="municipality" id="municipality" class="form-select" aria-label="Municipality"></select>
                 </div>
               </div>
               <div class="my-2">
-                <label for="Event" class="fw-bold form-label fs-5">Event *</label>
+                <label for="Event" class="form-label fw-bold fs-5">Event *</label>
                 <select name="Event" id="Event" class="form-select" aria-label="Event" required></select>
               </div>
               <div class=" my-2">
-                <label for="date" class="fw-bold form-label fs-5">Date of the event *</label>
+                <label for="date" class="form-label fw-bold fs-5">Date of the event *</label>
                 <input type="date" id="date" class="form-control" aria-label="Date of the event" required>
               </div>
               <div class=" my-2 ">
-                <label for="description" class="fw-bold form-label fs-5">Description of the event *</label>
+                <label for="description" class="form-label fw-bold fs-5">Description of the event *</label>
                 <textarea id="description" class="form-control" aria-label="Description of the event"
                   required></textarea>
                 <div class="invalid-feedback fs-5">
@@ -314,7 +342,7 @@
           <div class="tab-pane fade" id="tab2">
             <form class="column mx-4 needs-validation" novalidate>
               <div class=" my-2 row">
-                <label class="fw-bold form-label fs-5">Customer Information *</label>
+                <label class="form-label fw-bold fs-5">Customer Information *</label>
                 <div class="col-12 col-md-5 mt-2">
                   <input type="text" id="incidentFullName" class="form-control" aria-label="Full Name"
                     pattern="[A-Za-z\s]+" placeholder="Full name" required>
@@ -333,14 +361,14 @@
                   </div>
                 </div>
               </div>
-              <div class=" my-2 row">
+              <div class="row my-2">
                 <div class="col-12 col-md-7">
-                  <label for="incident" class="fw-bold form-label fs-5">Nature of the Complaint *</label>
+                  <label for="incident" class="form-label fw-bold fs-5">Nature of the Complaint *</label>
                   <select name="incident" id="incident" class="form-select  mb-3"
                     aria-label="Nature of the Complaint"></select>
                 </div>
-                <div class=" col-md-5">
-                  <label for="code" class="fw-bold form-label fs-5">Order Number *</label>
+                <div class="col-md-5">
+                  <label for="code" class="form-label fw-bold fs-5">Order Number *</label>
                   <input type="text" id="code" class="form-control mb-3" aria-label="Order Number" placeholder="2Fd3D7"
                     pattern="[A-Za-z1-9]+" required>
                   <p class="invalid-feedback">
@@ -348,23 +376,23 @@
                   </p>
                 </div>
               </div>
-              <div class="my-2 row">
+              <div class="row my-2">
                 <div class="col-md-5">
-                  <label for="incidentD" class="fw-bold form-label fs-5">Date of Purchase*</label>
+                  <label for="incidentD" class="form-label fw-bold fs-5">Date of Purchase*</label>
                   <input type="date" id="incidentD" class="form-control mb-3" aria-label="Date of Purchase" required>
                 </div>
                 <div class="col-12 col-md-7">
-                  <label for="resolution" class="fw-bold form-label fs-5">Resolution Preferences</label>
+                  <label for="resolution" class="form-label fw-bold fs-5">Resolution Preferences</label>
                   <select name="incident" id="resolution" class="form-select mb-3"
                     aria-label="Resolution Preferences"></select>
                 </div>
               </div>
-              <div class=" my-2">
-                <label for="Document" class="fw-bold form-label fs-5">Supporting Documents</label>
+              <div class="my-2">
+                <label for="Document" class="form-label fw-bold fs-5">Supporting Documents</label>
                 <input type="file" id="Document" aria-label="Supporting Documents" class="form-control mb-3">
               </div>
-              <div class=" my-2 ">
-                <label for="incidentDescription" class="fw-bold form-label fs-5">Description of the incident *</label>
+              <div class="my-2">
+                <label for="incidentDescription" class="form-label fw-bold fs-5">Description of the incident *</label>
                 <textarea id="incidentDescription" class="form-control" aria-label="Description of the incident"
                   required></textarea>
                 <p class="invalid-feedback">
@@ -373,9 +401,9 @@
               </div>
               <hr>
               <div class="d-flex flex-row flex-wrap">
-                <button type="reset" class="btn text-white col-12 col-md-3 my-2"
+                <button type="reset" class="btn  col-12 col-md-3 text-white my-2"
                   aria-label="Reset button">RESET</button>
-                <button type="submit" class="btn text-white col-12 col-md-9 my-2"
+                <button type="submit" class="btn col-12 col-md-9 text-white my-2"
                   aria-label="Submit button">SEND</button>
               </div>
             </form>
@@ -385,8 +413,8 @@
     </main>
     <!--Main Ends-->
     <!--Sidebar-->
-    <aside class="my-5 p-md-4 d-none d-md-block ">
-      <div class="side p-2 border rounded-4">
+    <aside class="d-none d-md-block my-5 p-md-4 ">
+      <div class="side border rounded-4 p-2">
         <!--Carousel-->
         <h4 class="fw-bold mb-2">Flower Specials</h4>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -428,7 +456,7 @@
                 <p class="fs-4">A sophisticated arrangement featuring various shades of pink blooms,
                   exuding grace and timeless elegance.
                 </p>
-                <span class="fw-bold my-2 float-end fs-5">Special Offer: 39.99€</span>
+                <span class="my-2 float-end fw-bold fs-5">Special Offer: 39.99€</span>
               </div>
             </div>
           </div>
@@ -437,14 +465,14 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title text-white fw-bold  fs-4">Earthy Tones Harmony Bouquet</h5>
+                <h5 class="modal-title text-white fw-bold fs-4">Earthy Tones Harmony Bouquet</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <p class="fs-5">Experience the warmth of nature with a harmonious blend of rich browns,
                   deep oranges, and subtle greens, creating a rustic and comforting arrangement.
                 </p>
-                <span class="fw-bold my-2 float-end">Special Offer: 44.99€</span>
+                <span class="my-2 float-end fw-bold fs-5">Special Offer: 44.99€</span>
               </div>
             </div>
           </div>
@@ -460,7 +488,7 @@
                 <p class="fs-5">Indulge in tranquility with delicate pastel flowers,
                   evoking a sense of calm and serenity for a gentle and peaceful ambiance.
                 </p>
-                <span class="fw-bold my-2 float-end">Special Offer: 37.99€</span>
+                <span class="my-2 float-end fw-bold fs-5">Special Offer: 37.99€</span>
               </div>
             </div>
           </div>
@@ -476,7 +504,7 @@
                 <p class="fs-5">Bask in vibrant energy with a burst of citrusy orange,
                   combining bright blooms to add a pop of joy and delight to any occasion.
                 </p>
-                <span class="fw-bold my-2 float-end">Special Offer: 42.99€</span>
+                <span class="my-2 float-end fw-bold fs-5">Special Offer: 42.99€</span>
               </div>
             </div>
           </div>
@@ -484,48 +512,62 @@
         <!--Modals Ends-->
         <!--Comments-->
         <h4 class="fw-bold mt-3">Comments</h4>
-        <div id="coment" class="d-flex h-50 flex-wrap"></div> <!--fills with js-->
+        <div id="coment" class="d-flex flex-wrap h-50"></div> <!--fills up with js-->
         <!--Comments Ends-->
       </div>
     </aside>
     <!--Sidebar Ends-->
-    <!--Toasts-->
-    <!--TODO: Make functional Toasts-->
-    <div aria-live="polite" aria-atomic="true" class="position-relative">
-      <!-- Position it: -->
-      <!-- - `.toast-container` for spacing between toasts -->
-      <!-- - `top-0` & `end-0` to position the toasts in the upper right corner -->
-      <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
-      <div class="toast-container top-0 end-0 p-3">
-        <!-- Then put toasts within -->
-        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="toast-header">
-            <img src="imgs/logo.png" class="rounded me-2" alt=".Logo">
-            <strong class="me-auto">Follow Us</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-          </div>
-          <div class="toast-body">
-            <p><i class="bi bi-instagram"></i><span class="pl-2">Instagram</span></p>
-            <p><i class="bi bi-twitter-x"></i><span class="pl-2">Twitter-x</span></p>
-            <p><i class="bi bi-facebook"></i><span class="pl-2">Facebook</span></p>
-          </div>
-        </div>
-        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="toast-header">
-            <img src="imgs/logo.png" class="rounded me-2" alt="Logo">
-            <strong class="me-auto">Call Us</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-          </div>
-          <div class="toast-body">
-            <p><i class="bi bi-phone"></i><span class="pl-2">34+ 961 15 16 17</span></p>
-            <p><i class="bi bi-telephone"></i><span class="pl-2">34+ 619 15 16 17</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Toast Ends-->
   </div>
   <!--Page Main Content Ends-->
+  <!--Toasts-->
+  <div class="toast-container bottom-0 end-0 p-3">
+    <div class="toast shadow" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <span class="me-auto text-white p-3 fw-bold fs-4">Follow Us</span>
+        <button type="button" class="btn-close mx-2" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        <p class="mx-3">
+          <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram " viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg>
+          <span class="text-white mx-3 fw-bold fs-5">@flowers_</span>
+        </p>
+        <p class="mx-3">
+          <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x  " viewBox="0 0 16 16">
+            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+          </svg>
+          <span class="text-white mx-3 fw-bold fs-5">@flowers_</span>
+        </p>
+        <p class="mx-3">
+          <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook  " viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg>
+          <span class="text-white mx-3 fw-bold fs-5">@flowers_</span></p>
+      </div>
+    </div>
+    <div class="toast shadow" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <span class="me-auto text-white p-3 fw-bold fs-4">Call Us</span>
+        <button type="button" class="btn-close mx-2" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body ">
+        <p class="mx-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+          </svg>
+          <span class="mx-3 text-white fw-bold fs-5">34+ 961 15 16 17</span>
+        </p>
+        <p class="mx-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+            <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+          </svg>
+          <span class="mx-3 text-white fw-bold fs-5">34+ 619 15 16 17</span></p>
+      </div>
+    </div>
+  </div>
+  <!--Toast Ends-->
   <hr class="border border-3 border-white opacity-100 m-0">
   <footer class="py-3 my-0">
     <ul class="nav justify-content-center">
@@ -538,12 +580,12 @@
   </footer>
 </body>
 <!--Bootstrap js-->
-  <script src="libs/js/bootstrap.bundle.js"></script>
-  <!-- For dropdown functionality -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="libs/js/bootstrap.bundle.js"></script>
+<!-- For dropdown functionality -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <!--Our js-->
- <script src="js/index.js"></script>
- <script src="js/contact_form.js"></script>
+<script src="js/index.js"></script>
+<script src="js/contact_form.js"></script>
 </html>
