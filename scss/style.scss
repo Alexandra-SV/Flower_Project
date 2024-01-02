@@ -189,7 +189,40 @@ body {
             }
         }
     }
+    #cookie { 
+        hr,a,label{color: $dark-pink;}
+        form .form-check-input {
+            border-color: $dark-pink;
+            --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23953154'/%3e%3c/svg%3e");
+            &:checked{
+                background-color: $dark-pink;
+                border-color: $bubblegum-pink;
+                --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+            }
+        }
+        .custom-tooltip {
+            background-color:$old-dusty-pink;
+            color: #fff;
+          }
+    }
+    /*Contact & Weeding SCSS*/
+    .mContact form , #cookie form{
+        .btn {
+            background-color: $old-dusty-pink;
+            border-color: $bubblegum-pink ;
+            letter-spacing: 5px;
+            &:hover {border-color: $light-pink;}
+            &:active {
+                //for chrome 
+                background-color: $dusty-pink-transparent;
+                border-color: $light-pink;
+            }
+        }
+    }
+    /*Contact SCSS*/
+
     /*Contact Main*/
+
     .mContact {
         .nav-link {
             background-color: $old-dusty-pink ;
