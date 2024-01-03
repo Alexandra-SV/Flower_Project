@@ -8,6 +8,8 @@ body {
   /*Header*/
   /*Desktop navbar*/
   /*Index Main*/
+  /*Contact & Weeding SCSS*/
+  /*Contact SCSS*/
   /*Contact Main*/
   /*Cookie Modal*/
   /*Contact & Wedding Forms*/
@@ -208,23 +210,6 @@ body main #wedding-section div span {
   letter-spacing: 5px;
   text-align: center;
 }
-
-body #cookie hr, body #cookie a, body #cookie label {
-  color: #953154;
-}
-body #cookie form .form-check-input {
-  border-color: #953154;
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23953154'/%3e%3c/svg%3e");
-}
-body #cookie form .form-check-input:checked {
-  background-color: #953154;
-  border-color: #e59eb9;
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-}
-body #cookie .custom-tooltip {
-  background-color: rgba(149, 49, 84, 0.6392156863);
-  color: #fff;
-}
 body .mContact form .btn, body #cookie form .btn {
   background-color: rgba(149, 49, 84, 0.6392156863);
   border-color: #e59eb9;
@@ -237,7 +222,6 @@ body .mContact form .btn:active, body #cookie form .btn:active {
   background-color: rgba(149, 49, 84, 0.3960784314);
   border-color: #fde4fe;
 }
-
 body .mContact .nav-link {
   background-color: rgba(149, 49, 84, 0.6392156863);
   border-color: #e59eb9;
@@ -316,8 +300,12 @@ body #cookie form .form-check-input {
 }
 body #cookie form .form-check-input:checked {
   background-color: #953154;
-  border-color: #e59eb9;
   --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+body .tooltip-inner {
+  background-color: #953154; /* Cambia este valor al tono de rosa que desees */
+  font-weight: bold;
+  font-size: large;
 }
 body .mContact form .btn, body #cookie form .btn {
   background-color: rgba(149, 49, 84, 0.6392156863);
@@ -333,7 +321,7 @@ body .mContact form .btn:active, body #cookie form .btn:active {
 }
 body aside {
   color: #953154;
-  flex-basis: 250px;
+  flex-basis: 280px;
 }
 body aside .carousel-item {
   height: 210px;
@@ -341,6 +329,7 @@ body aside .carousel-item {
 body aside .side {
   background-color: #d9aebd;
   height: 680px;
+  min-width: 200px;
 }
 body aside .side #coment {
   overflow-y: auto;
