@@ -3,6 +3,7 @@
 @import "helper/mixins";
 
 body {
+/*PARTE ALEXANDRA*/
     background-color: $light-pink;
     font-family: $alexandria;
 /*Back to top button*/
@@ -20,43 +21,65 @@ body {
     }
 /*Sign in/out modals*/
     .modal{
+        button{
+            background-color: $dark-pink;
+            border-color: $dark-pink;
+            color: white;
+            &[type='reset']{
+                background-color: $bubblegum-pink;
+                color: $dark-pink;
+                &:hover{
+                    background-color: $dark-pink;
+                    color: white;
+                }
+            }
+            &:not(.btn-close):hover{
+                background-color: $bubblegum-pink;
+                color: $dark-pink;
+                border-color: $dark-pink;
+            }
+        }
+        .modal-body button:active, .modal-footer button:active{
+            background-color: $bubblegum-pink;
+            color: $dark-pink;
+            border-color: $dark-pink;
+            box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
+        }
         .modal-header{
             background-color: $dark-pink;
             color: white;
+            .btn-close:focus {box-shadow: 0 0 0 0 rgba(229, 158, 185, 0.25);}
         }
         .modal-body{
-            input, h2, select{
+            input, h2, select, label, [id^='inputGroupPrepend']{
                 color: $dark-pink;
-                &[type='checkbox']{
-                    &:checked{
-                        background-color: $dark-pink;
-                        border-color: $dark-pink;
-                        box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
-                    }
-                }
                 &:focus{
                     border-color: $dark-pink;
                     box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
                 }
-            }
-            button{
-                background-color: $dark-pink;
-                border-color: $dark-pink;
-                color: white;
-                &:hover{
-                    background-color: $bubblegum-pink;
-                    color: $dark-pink;
+                &[type='checkbox']:checked{
+                    background-color: $dark-pink;
+                    border-color: $dark-pink;
                 }
             }
-        }
-        .modal-footer{
-            button{
-                background-color: $dark-pink;
-                border-color: $dark-pink;
-                color: white;
-                &:hover{
-                    background-color: $bubblegum-pink;
-                    color: $dark-pink;
+            table{
+                thead th, #total{
+                    color: white;
+                    background-color: $dark-pink;
+                }
+                tr{
+                    border-color: $dark-pink;
+                    td{
+                        color: $dark-pink;
+                        background-color: $light-pink;
+                    }
+                }
+                tbody{
+                    border-top-color: $dark-pink;
+                    th, #totalPrice{
+                        color: $dark-pink;
+                        background-color: $bubblegum-pink;
+                    }
                 }
             }
         }
@@ -134,12 +157,13 @@ body {
 /*Index Main*/
     main {
         section {
-            background-color: $dusty-pink;
-            border-radius: 20px;
+            h5{color: $dark-pink;}
             /*SECTION 1*/
-            #carouselExampleCaptions {
+            #flowerCarousel {
+                background-color: $dusty-pink;
+                border-radius: 10px;
                 .carousel-indicators button {background-color: $dark-pink;}
-                img {max-height: 300px;}
+                /* .carousel-item {min-height: 550px;} */
                 .carousel-caption {
                     a {
                         color: $dark-pink;
@@ -154,15 +178,73 @@ body {
                     border-radius: 10px;
                 }
             }
+            .card-img-overlay{
+                background-color: rgba(149, 49, 84, 0.8);
+                bottom: 50%;
+            }
             /*SECTION 2*/
-            .container {
-                .col-6 {
+            .events{
+                background-color: $dusty-pink;
+                border-radius: 10px;
+                .col-md-6 {
                     transition: transform .2s;
                     color: $dark-pink;
                     &:hover {transform: scale(1.1);}
                 }
+                nav ul{
+                    a{
+                        background-color: $bubblegum-pink;
+                        color: $dark-pink;
+                        border-color: $dark-pink;
+                    }
+                    .active a{
+                        background-color: $dark-pink;
+                        color: white;
+                        border-color: $dark-pink;
+                    }
+                    a:hover{
+                        background-color: $light-pink;
+                        color: $dark-pink;
+                    }
+                    a:active, a:focus{
+                        border-color: $dark-pink;
+                        box-shadow: 0 0 0 0.25rem rgba(122, 20, 59, 0.25);
+                    }
+                }
+            }
+            .faqs{
+                a, button{
+                    background-color: $dark-pink;
+                    border-color: $dark-pink;
+                    color: white;
+                    &:not(.collapsed){
+                        background-color: $dark-pink;
+                        color: white;
+                        &::after{--bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");}
+                    }
+                    &::after{
+                        --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                    }
+                    &:hover{
+                        background-color: $bubblegum-pink;
+                        color: $dark-pink;
+                        border-color: $dark-pink;
+                    }
+                    &:active, &:focus{
+                        border-color: $dark-pink;
+                        box-shadow: 0 0 0 0.25rem rgba(122, 20, 59, 0.25);
+                    }
+                }
+                .tips:hover{
+                    background-color: $light-pink;
+                }
+                .accordion-body{
+                    background-color: $bubblegum-pink;
+                    color: $dark-pink;
+                }
             }
         }
+/*PARTE ALFONSO*/
     /*Wedding Banner Section*/
         #wedding-section{
             background-image: url(../imgs/Weddings/weddingBanner.png);
@@ -189,7 +271,6 @@ body {
             }
         }
     }
-/*Contact & Weeding SCSS*/
     .mContact form , #cookie form{
         .btn {
             background-color: $old-dusty-pink;
@@ -197,7 +278,7 @@ body {
             letter-spacing: 5px;
             &:hover {border-color: $light-pink;}
             &:active {
-                //for chrome 
+                //for chrome
                 background-color: $dusty-pink-transparent;
                 border-color: $light-pink;
             }
@@ -334,6 +415,7 @@ body {
         .btn-close:focus {box-shadow: 0 0 0 0.25rem $light-pink}
         .btn-close {background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;}
     }
+/*PARTE ALEXANDRA*/
     /*Footer*/
     footer {
         background-color: $dark-pink;

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COMPONENTS</title>
+  <title>Welcome to Flower</title>
   <!--STYLES-->
   <link rel="stylesheet" href="libs/css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
@@ -16,20 +16,257 @@
   <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alexandria:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!--BACK TO TOP BUTTON-->
+  <button type="button" class="btn btn-lg" id="btn-back-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#953154" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+    </svg>
+  </button>
+  <!--END BACK TO TOP BUTTON-->
+  <!--SIGN IN MODAL-->
+  <div class="modal fade" id="signInModal" aria-hidden="true" aria-labelledby="signInModalLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 fw-bold" id="signInModalLabel">Sign In</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--SIGN IN FORM-->
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="validationCustomSignInEmail" class="form-label d-none"></label>
+              <input type="email" class="form-control" id="validationCustomSignInEmail" placeholder="Email" required>
+              <div class="invalid-feedback">
+                Please input a valid email.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustomSignInPass" class="form-label d-none"></label>
+              <input type="password" class="form-control" id="validationCustomSignInPass" placeholder="Password" required>
+              <div class="invalid-feedback">
+                Please input a valid password.
+              </div>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3" type="submit">Sign in</button>
+          </form>
+          <!--END SIGN IN FORM-->
+          <hr class="my-4">
+          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+          <button class="w-100 py-2 mb-2 btn rounded-3" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-google" viewBox="0 0 20 20">
+              <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+            </svg>
+            Sign in with Google
+          </button>
+          <button class="w-100 py-2 mb-2 btn rounded-3" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 20 20">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+            Sign in with Facebook
+          </button>
+        </div>
+        <div class="modal-footer">
+          <small class="text-body-secondary">Don't have an account?</small>
+          <button class="btn" data-bs-target="#signUpModal" data-bs-toggle="modal">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END SIGN IN MODAL-->
+  <!--SIGN UP MODAL-->
+  <div class="modal fade" id="signUpModal" aria-hidden="true" aria-labelledby="signUpModalLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 fw-bold" id="signUpModalLabel">Sign Up</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--SIGN UP FORM-->
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="validationCustomFirstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="validationCustomFirstName" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustomLastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="validationCustomLastName" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustomUsername" class="form-label">Email</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please provide a valid email.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustomPassword" class="form-label">Password</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend2">*</span>
+                <input type="password" class="form-control" id="validationCustomPassword" aria-describedby="inputGroupPrepend" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!*%#])[\w?!*%#]{8,}$" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Minimum 8 characters, one letter, number and symbol" required>
+                <div class="invalid-feedback">
+                  Please provide a password at least 8 characters long, with a minimum of one letter, number and symbol.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustomRegion" class="form-label">Region</label>
+              <select class="form-select" id="validationCustomRegion" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Africa</option>
+                <option>Asia</option>
+                <option>Europe</option>
+                <option>North America</option>
+                <option>South America</option>
+                <option>Oceania</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid region.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustomPhone" class="form-label">Phone number</label>
+              <input type="tel" class="form-control" id="validationCustomPhone" required>
+              <div class="invalid-feedback">
+                Please provide a valid phone number.
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div class="col-12 d-flex justify-content-between">
+              <button class="btn" type="submit">Create an account</button>
+              <button class="btn" type="reset">Reset</button>
+            </div>
+          </form>
+          <!--END SIGN UP FORM-->
+        </div>
+        <div class="modal-footer">
+          <small class="text-body-secondary">Have an account?</small>
+          <button class="btn" data-bs-target="#signInModal" data-bs-toggle="modal">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END SIGN UP MODAL-->
+  <!--CART MODAL-->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-hover text-center table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Subtotal</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">White Camellia</th>
+                  <td>13.00€</td>
+                  <td>25</td>
+                  <td>325€</td>
+                  <td>
+                    <a href="#" class="text-decoration-none nav-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Bloody Rose Seeds</th>
+                  <td>5.99€</td>
+                  <td>5</td>
+                  <td>29.25€</td>
+                  <td>
+                    <a href="#" class="text-decoration-none nav-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <label for="validationCustomPromo" class="form-label">Promotion Code</label>
+              <input type="text" class="form-control" id="validationCustomPromo" required>
+              <button class="btn my-2">Apply</button>
+            </div>
+            <div class="col-8">
+              <div class="table-responsive">
+                <table class="table table-hover text-center table-bordered">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Subtotal</th>
+                      <td>354.25€</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Discount</th>
+                      <td>0.00€</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" id="total">Total</th>
+                      <td class="fw-bold" id="totalPrice">354.25€</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--HEADER-->
   <header class="py-2">
     <!--Nav burger-->
     <nav class="navbar navbar-expand-lg navbar-dark d-md-none nav-burger py-3" aria-label="Offcanvas navbar large">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
           </svg>
         </button>
-        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header flex-column">
             <button type="button" class="btn-close btn-close-white align-self-end py-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-nav" class="img-fluid offcanvas-title"></a>
+            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="Logo" id="logo-nav" class="img-fluid offcanvas-title"></a>
           </div>
           <hr class="border border-3 border-white opacity-100 m-0">
           <div class="offcanvas-body py-0">
@@ -59,11 +296,11 @@
           </div>
           <hr class="border border-3 border-white opacity-100 m-0">
           <div class="offcanvas-footer d-flex justify-content-around py-4 text-white fw-semibold fs-5 text-center">
-            <button class="nav-link link-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign In</button>
+            <button class="nav-link link-light" data-bs-target="#signInModal" data-bs-toggle="modal">Sign In</button>
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
             </svg>
-            <button class="nav-link link-light" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign Up</button>
+            <button class="nav-link link-light" data-bs-target="#signUpModal" data-bs-toggle="modal">Sign Up</button>
           </div>
           <hr class="border border-3 border-white opacity-100 m-0">
         </div>
@@ -73,7 +310,7 @@
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
             </svg>
           </a>
-          <a href="#" class="p-1">
+          <a href="#" class="px-2 text-decoration-none" data-bs-toggle="modal" data-bs-target="#cartModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
             </svg>
@@ -85,25 +322,24 @@
     <!--Header logo and nav computer-->
     <div class="d-none d-md-flex row m-0 flex-nowrap justify-content-between align-items-center">
       <div class="col-4 offset-sm-4 text-center">
-        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-header" class="img-fluid"></a>
+        <a class="text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="Logo" id="logo-header" class="img-fluid"></a>
       </div>
-      <!--TODO: Modal para buscar o que aparezca una barra de busqueda-->
       <nav class="col-4 nav-header d-flex justify-content-end">
         <div class="input-group">
-          <input type="text" class="form-control" aria-label="Search" aria-describedby="button-addon2">
-          <button class="btn" type="button" id="button-addon2">
+          <input type="text" class="form-control" aria-label="Search" aria-describedby="button-search">
+          <button class="btn" type="submit" id="button-search">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#953154" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
             </svg>
           </button>
         </div>
-        <div class="my-2 mobile-buttons">
-          <a href="#" class="px-2 text-decoration-none">
+        <div class="m-2 mobile-buttons">
+          <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#cartModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
             </svg>
           </a>
-          <a href="#" class="px-2 text-decoration-none">
+          <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#signInModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
             </svg>
@@ -114,7 +350,40 @@
     <!--End header logo and nav computer-->
   </header>
   <!--END HEADER-->
-
+  <hr class="border border-3 border-white opacity-100 m-0">
+  <!--DESKTOP NAV-->
+  <nav class="d-none d-md-flex justify-content-center py-2 nav-desktop">
+    <ul class="nav nav-pills fw-semibold">
+      <!-- <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+        Best Sellers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Season</a>
+        <ul class="dropdown-menu">
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Winter</a></li>
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Spring</a></li>
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Summer</a></li>
+          <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Autumn</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Flowers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Plants</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Artificial</a>
+      </li>
+    </ul>
+  </nav>
+  <!--END DESKTOP NAV-->
+  <hr class="border border-3 border-white opacity-100 m-0">
   <!--FOOTER-->
   <footer class="py-3 my-0">
     <ul class="nav justify-content-center">
@@ -128,7 +397,7 @@
   <!--END FOOTER-->
 </body>
   <!--BOOTSTRAP JS-->
-  <script src="libs/js/bootstrap.bundle.js"></script>
+  <script src="libs/js/bootstrap.bundle.min.js"></script>
   <!--CUSTOM JS-->
   <script src="js/flower.js"></script>
 </html>
