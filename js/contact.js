@@ -126,16 +126,7 @@ resolutions = [
              sessionStorage.setItem(user,comment);
          }
      }
-//Validation
-    /* function validates() {
-        var forms = document.querySelectorAll('.needs-validation')
-        Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-            form.classList.add('was-validated')
-            }, false)
-        });
-    } */
+//Toasts
+    $(document).ready(function(){
+        $('.toast').toast('show');
+    });
