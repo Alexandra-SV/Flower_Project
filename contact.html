@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact section</title>
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="libs/css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <!--Fonts-->
@@ -232,183 +233,188 @@
   <!--Page Main Content -->
   <div class="main-info text-dark-pink d-flex ">
     <!--Main-->
-    <main class="mContact m-4 p-2 p-sm-3 flex-grow-1">
+    <main class=" mContact m-4 p-2 p-sm-3 flex-grow-1">
       <div id="forms-nav" class=" mt-4 rounded-4">
-        <ul class="nav nav-tabs p-3" id="myTabs">
-          <li class="nav-item">
-            <a class="nav-link active text-white fs-4" id="tab1-tab" data-toggle="tab" href="#tab1">Inquiries</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fs-4" id="tab2-tab" data-toggle="tab" href="#tab2">Complaints</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link dropdown-toggle text-white fs-4" href="#" id="navbarDropdown" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Comment here
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <form class="px-4 py-3 needs-validation" novalidate>
-                <div class="form-group my-2">
-                  <label for="dropdownUser" class="fw-bold form-label fs-5">User</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text text-white" id="basic-addon">@</span>
-                    <input type="text" class="form-control" id="dropdownUser" placeholder="User" aria-label="User name"
-                      pattern="[A-Za-z\s]+" required>
-                    <div class="invalid-feedback">
-                      Use a format that matches the one requested. ( a-zA-Z )
-                    </div>
+          <ul class="nav nav-tabs p-3" id="myTabs">
+              <li class="nav-item">
+                  <a class="nav-link active text-white fs-4" id="tab1-tab" data-bs-toggle="tab" href="#tab1">Inquiries</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white fs-4" id="tab2-tab" data-bs-toggle="tab" href="#tab2">Complaints</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link dropdown-toggle text-white fs-4" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Comment here
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <form class="px-4 py-3 needs-validation" novalidate>
+                          <div class="form-group my-2">
+                              <label for="dropdownUser" class="fw-bold form-label fs-5">User</label>
+                              <div class="input-group has-validation">
+                                  <span class="input-group-text text-white" id="basic-addon">@</span>
+                                  <input type="text" class="form-control" id="dropdownUser" placeholder="User" aria-label="User name"
+                                      pattern="[A-Za-z\s]+" required>
+                                  <div class="invalid-feedback">
+                                      Use a format that matches the one requested. ( a-zA-Z )
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-group my-2">
+                              <label for="dropdownComment" class="fw-bold form-label fs-5">Comment</label>
+                              <textarea class="form-control" id="dropdownComment" placeholder="Comment" aria-label="Comment"
+                                  pattern="[A-Za-z\s]+" required></textarea>
+                              <div class="invalid-feedback">
+                                  Use a format that matches the one requested. ( a-zA-Z )
+                              </div>
+                          </div>
+                          <button type="button" id="drButton" class="btn text-white ls-wide float-end">S E N D</button>
+                      </form>
                   </div>
-                </div>
-                <div class="form-group my-2">
-                  <label for="dropdownComment" class="fw-bold form-label fs-5">Comment</label>
-                  <textarea class="form-control" id="dropdownComment" placeholder="Comment" aria-label="Comment"
-                    pattern="[A-Za-z\s]+" required></textarea>
-                  <div class="invalid-feedback">
-                    Use a format that matches the one requested. ( a-zA-Z )
-                  </div>
-                </div>
-                <button type="submit" id="drButton" class="btn text-white ls-wide float-end">S E N D</button>
-              </form>
-            </div>
-          </li>
-        </ul>
-        <div class="tab-content mt-2">
-          <!-- Tab 1 - Inquiries Form -->
-          <div class="tab-pane fade show active" id="tab1">
-            <form class="column mx-4 needs-validation" novalidate>
-              <div class="my-2">
-                <label for="fullName" class="form-label fw-bold fs-5">Full Name</label>
-                <input type="text" id="fullName" class="form-control" aria-label="Full Name" pattern="[A-Za-z\s]+"
-                  required>
-                <div class="invalid-feedback fs-5">
-                  Use a format that matches the one requested. ( a-zA-Z )
-                </div>
+              </li>
+          </ul>
+          <div class="tab-content mt-2">
+              <!-- Tab 1 - Inquiries Form -->
+              <div class="tab-pane fade show active" id="tab1">
+                  <form class="column mx-4 needs-validation" novalidate>
+                      <div class="my-2">
+                          <label for="fullName" class="form-label fw-bold fs-5">Full Name</label>
+                          <input type="text" id="fullName" class="form-control" aria-label="Full Name" pattern="[A-Za-z\s]+"
+                              required>
+                          <div class="invalid-feedback fs-5">
+                              Use a format that matches the one requested. ( a-zA-Z )
+                          </div>
+                      </div>
+                      <div class="my-2">
+                          <label for="email" class="fw-bold form-label fs-5">E-mail</label>
+                          <div class="input-group mb-3 has-validation">
+                              <span class="input-group-text text-white" id="basic-addon1">@</span>
+                              <input type="email" id="email" class="form-control" aria-label="Email" required>
+                              <div class="invalid-feedback fs-5">
+                                  Use a format that matches the one requested. ( asd@ad.asd )
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row my-2">
+                          <div class="col-12 col-md-8">
+                              <label for="CCAA" class="fw-bold form-label fs-5">Autonomous Community</label>
+                              <select name="CCAA" id="CCAA" class="form-select" aria-label="Autonomous Community"></select>
+                          </div>
+                          <div class=" col-12 col-md-4 mt-2 mt-md-0">
+                              <label for="municipality" class="form-label fw-bold fs-5">Municipality</label>
+                              <select name="municipality" id="municipality" class="form-select" aria-label="Municipality"></select>
+                          </div>
+                      </div>
+                      <div class="my-2">
+                          <label for="Event" class="form-label fw-bold fs-5">Event *</label>
+                          <select name="Event" id="Event" class="form-select" aria-label="Event" required></select>
+                      </div>
+                      <div class=" my-2">
+                          <label for="date" class="form-label fw-bold fs-5">Date of the event *</label>
+                          <input type="date" id="date" class="form-control" aria-label="Date of the event" required>
+                      </div>
+                      <div class=" my-2 ">
+                          <label for="description" class="form-label fw-bold fs-5">Description of the event *</label>
+                          <textarea id="description" class="form-control" aria-label="Description of the event"
+                              required></textarea>
+                          <div class="invalid-feedback fs-5">
+                              You must fill out this section.
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                              aria-label="Agree to terms and conditions" required>
+                          <label class="form-check-label form-label fs-5" for="invalidCheck">
+                              Agree to terms and conditions
+                          </label>
+                          <div class="invalid-feedback ">
+                              You must agree before submitting.
+                          </div>
+                      </div>
+                      <div class="d-flex flex-row flex-wrap">
+                          <button type="reset" class="btn text-white col-12 col-md-3 my-2">RESET</button>
+                          <button type="submit" class="btn text-white col-12 col-md-9 my-2">SEND</button>
+                      </div>
+                  </form>
               </div>
-              <div class="my-2">
-                <label for="email" class="fw-bold form-label fs-5">E-mail</label>
-                <div class="input-group mb-3 has-validation ">
-                  <span class="input-group-text text-white" id="basic-addon1">@</span>
-                  <input type="email" id="email" class="form-control" aria-label="Email" required>
-                  <div class="invalid-feedback fs-5">
-                    Use a format that matches the one requested. ( asd@ad.asd )
-                  </div>
-                </div>
+              <!-- Tab 2 - Complains Form -->
+              <div class="tab-pane fade" id="tab2">
+                  <form class="column mx-4 needs-validation" novalidate>
+                      <div class=" my-2 row">
+                          <label class="form-label fw-bold fs-5">Customer Information *</label>
+                          <div class="col-sm-12 col-md-5 mt-2">
+                              <input type="text" id="incidentFullName" class="form-control" aria-label="Full Name"
+                                  pattern="[A-Za-z\s]+" placeholder="Full name" required>
+                              <p class="invalid-feedback">
+                                  Use a format that matches the one requested. ( a-zA-Z )
+                              </p>
+                          </div>
+                          <div class="col-sm-12 col-md-7 mt-2">
+                              <div class="input-group mb-3 has-validation ">
+                                  <span class="input-group-text text-white" id="basic-addon2">@</span>
+                                  <input type="email" id="incidentEmail" class="form-control" aria-label="Email" placeholder="Email"
+                                      required>
+                                  <p class="invalid-feedback">
+                                      Use a format that matches the one requested. ( asd@ad.asd )
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row my-2">
+                          <div class="col-12 col-md-12 col-lg-7 ">
+                              <label for="incident" class="form-label fw-bold fs-5">Nature of the Complaint *</label>
+                              <select name="incident" id="incident" class="form-select  mb-3"
+                                  aria-label="Nature of the Complaint"></select>
+                          </div>
+                          <div class="col-12 col-md-12 col-lg-5">
+                              <label for="code" class="form-label fw-bold fs-5">Order Number *</label>
+                              <input type="text" id="code" class="form-control mb-3" aria-label="Order Number" placeholder="2Fd3D7"
+                                  pattern="[A-Za-z1-9]+" required>
+                              <p class="invalid-feedback">
+                                  Use a format that matches the one requested. ( a-zA-Z1-9 )
+                              </p>
+                          </div>
+                      </div>
+                      <div class="row my-2">
+                          <div class="col-12 col-md-12 col-lg-5">
+                              <label for="incidentD" class="form-label fw-bold fs-5">Date of Purchase*</label>
+                              <input type="date" id="incidentD" class="form-control mb-3" aria-label="Date of Purchase" required>
+                          </div>
+                          <div class="col-12 col-md-12 col-lg-7">
+                              <label for="resolution" class="form-label fw-bold fs-5">Resolution Preferences</label>
+                              <select name="incident" id="resolution" class="form-select mb-3"
+                                  aria-label="Resolution Preferences"></select>
+                          </div>
+                      </div>
+                      <div class="my-2">
+                        <label for="Document" class="input-group-text btn fw-bold fs-5 text-wrap d-sm-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                                <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                            </svg>
+                            Supporting Documents
+                        </label>
+                        <input type="file" id="Document" aria-label="Supporting Documents" class="form-control d-none d-sm-block mb-3">
+                    </div>              
+                      <div class="my-2">
+                          <label for="incidentDescription" class="form-label fw-bold fs-5">Description of the incident *</label>
+                          <textarea id="incidentDescription" class="form-control" aria-label="Description of the incident"
+                              required></textarea>
+                          <p class="invalid-feedback">
+                              Please complete this section.
+                          </p>
+                      </div>
+                      <hr>
+                      <div class="d-flex flex-row flex-wrap">
+                          <button type="reset" class="btn  col-12 col-md-3 text-white my-2"
+                              aria-label="Reset button">RESET</button>
+                          <button type="submit" class="btn col-12 col-md-9 text-white my-2"
+                              aria-label="Submit button">SEND</button>
+                      </div>
+                  </form>
               </div>
-              <div class="row my-2">
-                <div class="col-12 col-md-6">
-                  <label for="CCAA" class="fw-bold form-label fs-5">Autonomous Community</label>
-                  <select name="CCAA" id="CCAA" class="form-select" aria-label="Autonomous Community"></select>
-                </div>
-                <div class=" col-12 col-md-5 mt-2 mt-md-0">
-                  <label for="municipality" class="form-label fw-bold fs-5">Municipality</label>
-                  <select name="municipality" id="municipality" class="form-select" aria-label="Municipality"></select>
-                </div>
-              </div>
-              <div class="my-2">
-                <label for="Event" class="form-label fw-bold fs-5">Event *</label>
-                <select name="Event" id="Event" class="form-select" aria-label="Event" required></select>
-              </div>
-              <div class=" my-2">
-                <label for="date" class="form-label fw-bold fs-5">Date of the event *</label>
-                <input type="date" id="date" class="form-control" aria-label="Date of the event" required>
-              </div>
-              <div class=" my-2 ">
-                <label for="description" class="form-label fw-bold fs-5">Description of the event *</label>
-                <textarea id="description" class="form-control" aria-label="Description of the event"
-                  required></textarea>
-                <div class="invalid-feedback fs-5">
-                  You must fill out this section.
-                </div>
-              </div>
-              <hr>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
-                  aria-label="Agree to terms and conditions" required>
-                <label class="form-check-label form-label fs-5" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback ">
-                  You must agree before submitting.
-                </div>
-              </div>
-              <div class="d-flex flex-row flex-wrap">
-                <button type="reset" class="btn text-white col-12 col-md-3 my-2">RESET</button>
-                <button type="submit" class="btn text-white col-12 col-md-9 my-2">SEND</button>
-              </div>
-
-            </form>
           </div>
-          <!-- Tab 2 - Complains Form -->
-          <div class="tab-pane fade" id="tab2">
-            <form class="column mx-4 needs-validation" novalidate>
-              <div class=" my-2 row">
-                <label class="form-label fw-bold fs-5">Customer Information *</label>
-                <div class="col-12 col-md-5 mt-2">
-                  <input type="text" id="incidentFullName" class="form-control" aria-label="Full Name"
-                    pattern="[A-Za-z\s]+" placeholder="Full name" required>
-                  <p class="invalid-feedback">
-                    Use a format that matches the one requested. ( a-zA-Z )
-                  </p>
-                </div>
-                <div class="col-12 col-md-7 mt-2">
-                  <div class="input-group mb-3 has-validation ">
-                    <span class="input-group-text text-white" id="basic-addon2">@</span>
-                    <input type="email" id="incidentEmail" class="form-control" aria-label="Email" placeholder="Email"
-                      required>
-                    <p class="invalid-feedback">
-                      Use a format that matches the one requested. ( asd@ad.asd )
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="row my-2">
-                <div class="col-12 col-md-7">
-                  <label for="incident" class="form-label fw-bold fs-5">Nature of the Complaint *</label>
-                  <select name="incident" id="incident" class="form-select  mb-3"
-                    aria-label="Nature of the Complaint"></select>
-                </div>
-                <div class="col-md-5">
-                  <label for="code" class="form-label fw-bold fs-5">Order Number *</label>
-                  <input type="text" id="code" class="form-control mb-3" aria-label="Order Number" placeholder="2Fd3D7"
-                    pattern="[A-Za-z1-9]+" required>
-                  <p class="invalid-feedback">
-                    Use a format that matches the one requested. ( a-zA-Z1-9 )
-                  </p>
-                </div>
-              </div>
-              <div class="row my-2">
-                <div class="col-md-5">
-                  <label for="incidentD" class="form-label fw-bold fs-5">Date of Purchase*</label>
-                  <input type="date" id="incidentD" class="form-control mb-3" aria-label="Date of Purchase" required>
-                </div>
-                <div class="col-12 col-md-7">
-                  <label for="resolution" class="form-label fw-bold fs-5">Resolution Preferences</label>
-                  <select name="incident" id="resolution" class="form-select mb-3"
-                    aria-label="Resolution Preferences"></select>
-                </div>
-              </div>
-              <div class="my-2">
-                <label for="Document" class="form-label fw-bold fs-5">Supporting Documents</label>
-                <input type="file" id="Document" aria-label="Supporting Documents" class="form-control mb-3">
-              </div>
-              <div class="my-2">
-                <label for="incidentDescription" class="form-label fw-bold fs-5">Description of the incident *</label>
-                <textarea id="incidentDescription" class="form-control" aria-label="Description of the incident"
-                  required></textarea>
-                <p class="invalid-feedback">
-                  Please complete this section.
-                </p>
-              </div>
-              <hr>
-              <div class="d-flex flex-row flex-wrap">
-                <button type="reset" class="btn  col-12 col-md-3 text-white my-2"
-                  aria-label="Reset button">RESET</button>
-                <button type="submit" class="btn col-12 col-md-9 text-white my-2"
-                  aria-label="Submit button">SEND</button>
-              </div>
-            </form>
-          </div>
-        </div>
       </div>
     </main>
     <!--Main Ends-->
@@ -581,11 +587,10 @@
 </body>
 <!--Bootstrap js-->
 <script src="libs/js/bootstrap.bundle.js"></script>
-<!-- For dropdown functionality -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- For dropdown and tabs functionality -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <!--Our js-->
-<script src="js/flower.js"></script>
 <script src="js/contact.js"></script>
+<script src="js/flower.js"></script>
 </html>

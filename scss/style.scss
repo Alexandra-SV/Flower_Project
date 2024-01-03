@@ -5,7 +5,7 @@
 body {
     background-color: $light-pink;
     font-family: $alexandria;
-    /*Back to top button*/
+/*Back to top button*/
     #btn-back-to-top {
         position: fixed;
         bottom: 20px;
@@ -18,7 +18,7 @@ body {
         }
         &:active {border: 0px solid;}
     }
-    /*Sign in/out modals*/
+/*Sign in/out modals*/
     .modal{
         .modal-header{
             background-color: $dark-pink;
@@ -61,7 +61,7 @@ body {
             }
         }
     }
-    /*Header*/
+/*Header*/
     header {
         background-color: $dark-pink;
         .nav-header .input-group {
@@ -111,7 +111,7 @@ body {
             }
         }
     }
-    /*Desktop navbar*/
+/*Desktop navbar*/
     .nav-desktop {
         background-color: $bubblegum-pink;
         .nav-pills li {
@@ -131,7 +131,7 @@ body {
             }
         }
     }
-    /*Index Main*/
+/*Index Main*/
     main {
         section {
             background-color: $dusty-pink;
@@ -163,7 +163,7 @@ body {
                 }
             }
         }
-        /*Wedding Banner Section*/
+    /*Wedding Banner Section*/
         #wedding-section{
             background-image: url(../imgs/Weddings/weddingBanner.png);
             background-size: cover;
@@ -189,23 +189,7 @@ body {
             }
         }
     }
-    #cookie { 
-        hr,a,label{color: $dark-pink;}
-        form .form-check-input {
-            border-color: $dark-pink;
-            --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23953154'/%3e%3c/svg%3e");
-            &:checked{
-                background-color: $dark-pink;
-                border-color: $bubblegum-pink;
-                --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-            }
-        }
-        .custom-tooltip {
-            background-color:$old-dusty-pink;
-            color: #fff;
-          }
-    }
-    /*Contact & Weeding SCSS*/
+/*Contact & Weeding SCSS*/
     .mContact form , #cookie form{
         .btn {
             background-color: $old-dusty-pink;
@@ -219,10 +203,8 @@ body {
             }
         }
     }
-    /*Contact SCSS*/
-
+/*Contact SCSS*/
     /*Contact Main*/
-
     .mContact {
         .nav-link {
             background-color: $old-dusty-pink ;
@@ -289,11 +271,15 @@ body {
             --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23953154'/%3e%3c/svg%3e");
             &:checked{
                 background-color: $dark-pink;
-                border-color: $bubblegum-pink;
                 --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
             }
-            }
+        }
     }
+    .tooltip-inner {
+            background-color: $dark-pink; /* Cambia este valor al tono de rosa que desees */
+            font-weight:bold;
+            font-size: large;
+        }
     /*Contact & Wedding Forms*/
     .mContact form , #cookie form{
         .btn {
@@ -311,11 +297,12 @@ body {
     /*Contact Aside*/
     aside {
         color: $dark-pink;
-        flex-basis: 250px;
+        flex-basis: 280px;
         .carousel-item {height: 210px;}
         .side {
             background-color: $dusty-pink;
             height: 680px;
+            min-width: 200px;
             #coment {
                 overflow-y: auto;
                 //hide scrollbar
