@@ -65,7 +65,6 @@ resolutions = [
     resolution=document.getElementById('resolution');
     communityLoad();
     commentLoad();
-    /* validates(); */
     optionLoad(events,eventType);
     optionLoad(issues,issueSelect);
     optionLoad(resolutions,resolution);
@@ -124,9 +123,12 @@ resolutions = [
              var user=document.getElementById('dropdownUser').value;
              var comment=document.getElementById('dropdownComment').value;
              sessionStorage.setItem(user,comment);
+             commentLoad();
          }
      }
 //Toasts
-    $(document).ready(function(){
-        $('.toast').toast('show');
-    });
+    var toastElements = document.querySelectorAll('.toast');
+        toastElements.forEach(function (toastElement) {
+            var toast = new bootstrap.Toast(toastElement);
+                toast.show();
+        });
