@@ -69,17 +69,17 @@ resolutions = [
     optionLoad(events,eventType);
     optionLoad(issues,issueSelect);
     optionLoad(resolutions,resolution);
-    
+
 //Load information
     /**
      * @function optionLoad
-     * 
+     *
      * Vuelca los elementos de un array en un option para
      * añadirlos a un elemento HTML
-     * 
+     *
      * @param Array values
      * @param Object element
-     * 
+     *
      */
     function optionLoad(values,element) {
         for (val of values) {
@@ -89,7 +89,7 @@ resolutions = [
             element.appendChild(option);
         }
     }
-    function communityLoad() { 
+    function communityLoad() {
         optionLoad(comunidadesAutonomas,community);
         municipalityLoad(true);
     }
@@ -125,9 +125,9 @@ resolutions = [
              var comment=document.getElementById('dropdownComment').value;
              sessionStorage.setItem(user,comment);
          }
-     }     
+     }
 //Validation
-    function validates() {
+    /* function validates() {
         var forms = document.querySelectorAll('.needs-validation')
         Array.from(forms).forEach(form => {
             form.addEventListener('submit', event => {
@@ -138,4 +138,4 @@ resolutions = [
             form.classList.add('was-validated')
             }, false)
         });
-    }
+    } */
