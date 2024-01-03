@@ -24,105 +24,123 @@
   </button>
   <!--END BACK TO TOP BUTTON-->
   <!--SIGN IN MODAL-->
-  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal fade" id="signInModal" aria-hidden="true" aria-labelledby="signInModalLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel">Sign In</h1>
+          <h1 class="modal-title fs-5 fw-bold" id="signInModalLabel">Sign In</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <!--SIGN IN FORM-->
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-          </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
-          <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="validationCustomSignInEmail" class="form-label d-none"></label>
+              <input type="email" class="form-control" id="validationCustomSignInEmail" placeholder="Email" required>
+              <div class="invalid-feedback">
+                Please input a valid email.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustomSignInPass" class="form-label d-none"></label>
+              <input type="password" class="form-control" id="validationCustomSignInPass" placeholder="Password" required>
+              <div class="invalid-feedback">
+                Please input a valid password.
+              </div>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3" type="submit">Sign in</button>
+          </form>
+          <!--END SIGN IN FORM-->
           <hr class="my-4">
           <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
           <button class="w-100 py-2 mb-2 btn rounded-3" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#google"></use></svg>
-            Sign up with Google
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-google" viewBox="0 0 20 20">
+              <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+            </svg>
+            Sign in with Google
           </button>
           <button class="w-100 py-2 mb-2 btn rounded-3" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
-            Sign up with Facebook
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 20 20">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+            Sign in with Facebook
           </button>
         </div>
         <div class="modal-footer">
           <small class="text-body-secondary">Don't have an account?</small>
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign Up</button>
+          <button class="btn" data-bs-target="#signUpModal" data-bs-toggle="modal">Sign Up</button>
         </div>
       </div>
     </div>
   </div>
   <!--END SIGN IN MODAL-->
   <!--SIGN UP MODAL-->
-  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal fade" id="signUpModal" aria-hidden="true" aria-labelledby="signUpModalLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel2">Sign Up</h1>
+          <h1 class="modal-title fs-5 fw-bold" id="signUpModalLabel">Sign Up</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <!--SIGN UP FORM-->
           <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-4">
-              <label for="validationCustom01" class="form-label">First name</label>
-              <input type="text" class="form-control" id="validationCustom01" required>
+            <div class="col-md-6">
+              <label for="validationCustomFirstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="validationCustomFirstName" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
             </div>
-            <div class="col-md-4">
-              <label for="validationCustom02" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="validationCustom02" required>
+            <div class="col-md-6">
+              <label for="validationCustomLastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="validationCustomLastName" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
             </div>
-            <div class="col-md-4">
-              <label for="validationCustomUsername" class="form-label">Username</label>
+            <div class="col-md-6">
+              <label for="validationCustomUsername" class="form-label">Email</label>
               <div class="input-group has-validation">
                 <span class="input-group-text" id="inputGroupPrepend">@</span>
-                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                 <div class="invalid-feedback">
-                  Please choose a username.
+                  Please provide a valid email.
                 </div>
               </div>
             </div>
             <div class="col-md-6">
-              <label for="validationCustom03" class="form-label">City</label>
-              <input type="text" class="form-control" id="validationCustom03" required>
-              <div class="invalid-feedback">
-                Please provide a valid city.
+              <label for="validationCustomPassword" class="form-label">Password</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend2">*</span>
+                <input type="password" class="form-control" id="validationCustomPassword" aria-describedby="inputGroupPrepend" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!*%#])[\w?!*%#]{8,}$" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Minimum 8 characters, one letter, number and symbol" required>
+                <div class="invalid-feedback">
+                  Please provide a password at least 8 characters long, with a minimum of one letter, number and symbol.
+                </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <label for="validationCustom04" class="form-label">State</label>
-              <select class="form-select" id="validationCustom04" required>
+            <div class="col-md-6">
+              <label for="validationCustomRegion" class="form-label">Region</label>
+              <select class="form-select" id="validationCustomRegion" required>
                 <option selected disabled value="">Choose...</option>
-                <option>...</option>
-                <option>...</option>
-                <option>...</option>
-                <option>...</option>
-                <option>...</option>
+                <option>Africa</option>
+                <option>Asia</option>
+                <option>Europe</option>
+                <option>North America</option>
+                <option>South America</option>
+                <option>Oceania</option>
               </select>
               <div class="invalid-feedback">
-                Please select a valid state.
+                Please select a valid region.
               </div>
             </div>
-            <div class="col-md-3">
-              <label for="validationCustom05" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="validationCustom05" required>
+            <div class="col-md-6">
+              <label for="validationCustomPhone" class="form-label">Phone number</label>
+              <input type="tel" class="form-control" id="validationCustomPhone" required>
               <div class="invalid-feedback">
-                Please provide a valid zip.
+                Please provide a valid phone number.
               </div>
             </div>
             <div class="col-12">
@@ -136,34 +154,119 @@
                 </div>
               </div>
             </div>
-            <div class="col-12">
-              <button class="btn btn-primary" type="submit">Create an account</button>
+            <div class="col-12 d-flex justify-content-between">
+              <button class="btn" type="submit">Create an account</button>
+              <button class="btn" type="reset">Reset</button>
             </div>
           </form>
           <!--END SIGN UP FORM-->
         </div>
         <div class="modal-footer">
           <small class="text-body-secondary">Have an account?</small>
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign In</button>
+          <button class="btn" data-bs-target="#signInModal" data-bs-toggle="modal">Sign In</button>
         </div>
       </div>
     </div>
   </div>
   <!--END SIGN UP MODAL-->
+  <!--CART MODAL-->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-hover text-center table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Subtotal</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">White Camellia</th>
+                  <td>13.00€</td>
+                  <td>25</td>
+                  <td>325€</td>
+                  <td>
+                    <a href="#" class="text-decoration-none nav-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Bloody Rose Seeds</th>
+                  <td>5.99€</td>
+                  <td>5</td>
+                  <td>29.25€</td>
+                  <td>
+                    <a href="#" class="text-decoration-none nav-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <label for="validationCustomPromo" class="form-label">Promotion Code</label>
+              <input type="text" class="form-control" id="validationCustomPromo" required>
+              <button class="btn my-2">Apply</button>
+            </div>
+            <div class="col-8">
+              <div class="table-responsive">
+                <table class="table table-hover text-center table-bordered">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Subtotal</th>
+                      <td>354.25€</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Discount</th>
+                      <td>0.00€</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" id="total">Total</th>
+                      <td class="fw-bold" id="totalPrice">354.25€</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--HEADER-->
   <header class="py-2">
     <!--Nav burger-->
     <nav class="navbar navbar-expand-lg navbar-dark d-md-none nav-burger py-3" aria-label="Offcanvas navbar large">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
           </svg>
         </button>
-        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header flex-column">
             <button type="button" class="btn-close btn-close-white align-self-end py-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-nav" class="img-fluid offcanvas-title"></a>
+            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="Logo" id="logo-nav" class="img-fluid offcanvas-title"></a>
           </div>
           <hr class="border border-3 border-white opacity-100 m-0">
           <div class="offcanvas-body py-0">
@@ -193,11 +296,11 @@
           </div>
           <hr class="border border-3 border-white opacity-100 m-0">
           <div class="offcanvas-footer d-flex justify-content-around py-4 text-white fw-semibold fs-5 text-center">
-            <button class="nav-link link-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Sign In</button>
+            <button class="nav-link link-light" data-bs-target="#signInModal" data-bs-toggle="modal">Sign In</button>
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
             </svg>
-            <button class="nav-link link-light" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sign Up</button>
+            <button class="nav-link link-light" data-bs-target="#signUpModal" data-bs-toggle="modal">Sign Up</button>
           </div>
           <hr class="border border-3 border-white opacity-100 m-0">
         </div>
@@ -207,7 +310,7 @@
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
             </svg>
           </a>
-          <a href="#" class="p-1">
+          <a href="#" class="px-2 text-decoration-none" data-bs-toggle="modal" data-bs-target="#cartModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
             </svg>
@@ -219,25 +322,24 @@
     <!--Header logo and nav computer-->
     <div class="d-none d-md-flex row m-0 flex-nowrap justify-content-between align-items-center">
       <div class="col-4 offset-sm-4 text-center">
-        <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="flower-logo" id="logo-header" class="img-fluid"></a>
+        <a class="text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="Logo" id="logo-header" class="img-fluid"></a>
       </div>
-      <!--TODO: Modal para buscar o que aparezca una barra de busqueda-->
       <nav class="col-4 nav-header d-flex justify-content-end">
         <div class="input-group">
-          <input type="text" class="form-control" aria-label="Search" aria-describedby="button-addon2">
-          <button class="btn" type="button" id="button-addon2">
+          <input type="text" class="form-control" aria-label="Search" aria-describedby="button-search">
+          <button class="btn" type="submit" id="button-search">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#953154" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
             </svg>
           </button>
         </div>
-        <div class="my-2 mobile-buttons">
-          <a href="#" class="px-2 text-decoration-none">
+        <div class="m-2 mobile-buttons">
+          <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#cartModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
             </svg>
           </a>
-          <a href="#" class="px-2 text-decoration-none">
+          <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#signInModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
               <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
             </svg>
@@ -283,103 +385,174 @@
   <!--END DESKTOP NAV-->
   <!--MAIN-->
   <main >
-    <section class="container my-4 w-75">
-      <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <section class="container">
+      <div class="row g-5 m-0">
+        <div class="col-lg-6">
+          <div id="flowerCarousel" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#flowerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#flowerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#flowerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner px-3">
+              <h5 class="fw-bold py-2">Seasonal flowers</h5>
+              <div class="carousel-item active">
+                <div class="text-center m-5">
+                  <div class="row align-items-center">
+                    <div class="col-xl-6">
+                      <a href="#" class="text-decoration-none">
+                        <img class="w-75" src="imgs/Flowers/camellia.png" alt="Camellia">
+                      </a>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="carousel-caption position-relative mt-5">
+                        <h2 class="fw-bold">Camellia</h2>
+                        <p class="d-none d-sm-block fs-5">Queens of the winter flowers, Camellias are attractive evergreen shrubs highly prized for the beauty of their exquisite blooms. <a href="#">Read more...</a></p>
+                      </div><!--enddetails-->
+                    </div><!--endcol-->
+                  </div><!--endrow-->
+                </div><!--endcontainer-->
+              </div><!--endcarousel-item-->
+              <div class="carousel-item">
+                <div class="text-center m-5">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <a href="#" class="text-decoration-none">
+                        <img class="w-75" src="imgs/Flowers/gardenia.png" alt="Gardenia">
+                      </a>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="carousel-caption position-relative mt-5">
+                        <h2 class="fw-bold">Gardenia</h2>
+                        <p class="d-none d-sm-block fs-5">Beloved for their intoxicating fragrance and attractive, Gardenias are irresistible heat-loving evergreen shrubs or trees. <a href="#">Read more...</a></p>
+                      </div><!--enddetails-->
+                    </div><!--endcol-->
+                  </div><!--endrow-->
+                </div><!--endcontainer-->
+              </div><!--endcarousel-item-->
+              <div class="carousel-item">
+                <div class="text-center m-5">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <a href="#" class="text-decoration-none">
+                        <img class="w-75" src="imgs/Flowers/hellebore.png" alt="Hellebore">
+                      </a>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="carousel-caption position-relative mt-5">
+                        <h2 class="fw-bold">Hellebore</h2>
+                        <p class="d-none d-sm-block fs-5">Hellebores are classic plants for winter interest, with elegant, nodding blooms in shades of green, white, pink or ruby. <a href="#">Read more...</a></p>
+                      </div><!--enddetails-->
+                    </div><!--endcol-->
+                  </div><!--endrow-->
+                </div><!--endcontainer-->
+              </div><!--endcarousel-item-->
+            </div>
+            <button class="carousel-control-prev justify-content-center" type="button" data-bs-target="#flowerCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next justify-content-center" type="button" data-bs-target="#flowerCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-        <div class="carousel-inner px-3">
-          <div class="carousel-item active">
-            <div class="text-center m-5">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <a href="#" class="text-decoration-none">
-                    <img class="w-75" src="imgs/Flowers/camellia.png" alt="">
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="carousel-caption position-relative pe-md-5 mt-5">
-                    <h2 class="fw-bold">Camellia</h2>
-                    <p class="d-none d-md-block fs-5">Queens of the winter flowers, Camellias are attractive evergreen shrubs that are highly prized for the beauty of their exquisite blooms, their splendid evergreen foliage, and their compact shapely habit. <a href="#">Read more...</a></p>
-                  </div><!--enddetails-->
-                </div><!--endcol-->
-              </div><!--endrow-->
-            </div><!--endcontainer-->
-          </div><!--endcarousel-item-->
-          <div class="carousel-item">
-            <div class="text-center m-5">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <a href="#" class="text-decoration-none">
-                    <img class="w-75" src="imgs/Flowers/gardenia.png" alt="">
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="carousel-caption position-relative pe-md-5 mt-5">
-                    <h2 class="fw-bold">Gardenia</h2>
-                    <p class="d-none d-md-block fs-5">Beloved for their intoxicating fragrance and attractive, waxy, creamy-white flowers contrasting beautifully with their shiny, leathery, dark green leaves, Gardenias are irresistible heat-loving evergreen shrubs or trees. <a href="#">Read more...</a></p>
-                  </div><!--enddetails-->
-                </div><!--endcol-->
-              </div><!--endrow-->
-            </div><!--endcontainer-->
-          </div><!--endcarousel-item-->
-          <div class="carousel-item">
-            <div class="text-center m-5">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <a href="#" class="text-decoration-none">
-                    <img class="w-75" src="imgs/Flowers/hellebore.png" alt="">
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <div class="carousel-caption position-relative pe-md-5 mt-5">
-                    <h2 class="fw-bold">Hellebore</h2>
-                    <p class="d-none d-md-block fs-5">Hellebores are classic plants for winter interest, with elegant, nodding blooms in shades of green, white, pink or ruby. <a href="#">Read more...</a></p>
-                  </div><!--enddetails-->
-                </div><!--endcol-->
-              </div><!--endrow-->
-            </div><!--endcontainer-->
-          </div><!--endcarousel-item-->
+        <div class="col-lg-6 align-self-center">
+          <div class="card text-bg-dark border-0">
+            <img src="imgs/store.jpg" class="card-img" alt="Store">
+            <div class="card-img-overlay">
+              <h5 class="card-title">New Store Opening!</h5>
+              <p class="card-text">Come join us to the inauguration of our new location in Barcelona and enjoy some nice gifts and coupons. <a href="#" class="text-white">Read more...</a></p>
+              <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            </div>
+          </div>
         </div>
-        <button class="carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next justify-content-end" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </section>
-    <section class="py-4 my-4 rounded-0 fw-bold">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-6 col-md-4 p-2">
-            <a href="wedding.html"><img src="imgs/Events/weddings.png" alt="" class="img-fluid rounded-circle shadow"></a>
-            <p>Weddings</p>
+    <section class="container mt-3">
+      <div class="row g-5 m-0">
+        <div class="col-md-4 faqs mb-5 mt-0 align-self-center">
+          <h5 class="fw-bold py-2">FAQs</h5>
+          <div class="accordion accordion-flush" id="accordionFAQ">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  What sets your flower shop apart from others?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">We take pride in our fresh and high-quality flowers, personalized service, and attention to detail. Our experienced florists are dedicated to creating stunning arrangements for every customer.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Do you offer international flower delivery?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">At the moment, we only provide local and national flower delivery services. Check our delivery information for areas covered.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  How do I care for my flowers to make them last longer?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">Absolutely thrilled that you asked! We've curated a subpage dedicated to transforming your flower care routine into a blooming success story.
+                <a href="#" class="btn m-3 tips">Check our plant tips and tricks!</a></div>
+              </div>
+            </div>
           </div>
-          <div class="col-6 col-md-4 p-2">
-            <img src="imgs/Events/banquets.png" alt="" class="img-fluid rounded-circle shadow">
-            <p>Banquets</p>
+        </div>
+        <div class="col-md-8 fw-bold events align-self-center mt-0 mb-5">
+          <h5 class="fw-bold py-2">Events</h5>
+          <div class="row text-center" id="events1">
+            <div class="col-md-6 p-4">
+              <a href="wedding.html"><img src="imgs/Events/weddings.png" alt="Weddings" class="img-fluid rounded-circle shadow"></a>
+              <p>Weddings</p>
+            </div>
+            <div class="col-md-6 p-4">
+              <a href="#"><img src="imgs/Events/banquets.png" alt="Banquets" class="img-fluid rounded-circle shadow"></a>
+              <p>Banquets</p>
+            </div>
           </div>
-          <div class="col-6 col-md-4 p-2">
-            <img src="imgs/Events/funerals.png" alt="" class="img-fluid rounded-circle shadow">
-            <p>Funerals</p>
+          <div class="row text-center d-none" id="events2">
+            <div class="col-md-6 p-4">
+              <a href="#"><img src="imgs/Events/funerals.png" alt="Funerals" class="img-fluid rounded-circle shadow"></a>
+              <p>Funerals</p>
+            </div>
+            <div class="col-md-6 p-4">
+              <a href="#"><img src="imgs/Events/office.png" alt="Offices" class="img-fluid rounded-circle shadow"></a>
+              <p>Offices</p>
+            </div>
           </div>
-          <div class="col-6 col-md-4 p-2">
-            <img src="imgs/Events/office.png" alt="" class="img-fluid rounded-circle shadow">
-            <p>Office</p>
+          <div class="row text-center d-none" id="events3">
+            <div class="col-md-6 p-4">
+              <a href="#"><img src="imgs/Events/holidays.png" alt="Holidays" class="img-fluid rounded-circle shadow"></a>
+              <p>Holidays</p>
+            </div>
+            <div class="col-md-6 p-4">
+              <a href="#"><img src="imgs/Events/parties.png" alt="Parties" class="img-fluid rounded-circle shadow"></a>
+              <p>Parties</p>
+            </div>
           </div>
-          <div class="col-6 col-md-4 p-2">
-            <img src="imgs/Events/holidays.png" alt="" class="img-fluid rounded-circle shadow">
-            <p>Holidays</p>
-          </div>
-          <div class="col-6 col-md-4 p-2">
-            <img src="imgs/Events/parties.png" alt="" class="img-fluid rounded-circle shadow">
-            <p>Parties</p>
-          </div>
+          <nav aria-label="Events Pages" class="d-flex justify-content-center">
+            <ul class="pagination pagination-md">
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#events1">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#events2">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#events3">3</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </section>
@@ -399,8 +572,8 @@
   <!--END FOOTER-->
 </body>
   <!--BOOTSTRAP JS-->
-  <script src="libs/js/bootstrap.bundle.js"></script>
+  <script src="libs/js/bootstrap.bundle.min.js"></script>
   <!--CUSTOM JS-->
   <script src="js/flower.js"></script>
-  <!-- <script src="js/index.js"></script> -->
+  <script src="js/index.js"></script>
 </html>

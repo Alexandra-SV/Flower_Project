@@ -65,7 +65,7 @@ resolutions = [
     resolution=document.getElementById('resolution');
     communityLoad();
     commentLoad();
-    validates();
+    /* validates(); */
     optionLoad(events,eventType);
     optionLoad(issues,issueSelect);
     optionLoad(resolutions,resolution);

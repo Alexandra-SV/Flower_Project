@@ -1,6 +1,7 @@
 /*Colors*/
 /*Fonts and sizes*/
 body {
+  /*PARTE ALEXANDRA*/
   background-color: #fde4fe;
   font-family: "Alexandria", serif;
   /*Back to top button*/
@@ -8,6 +9,8 @@ body {
   /*Header*/
   /*Desktop navbar*/
   /*Index Main*/
+  /*Contact & Weeding SCSS*/
+  /*Contact SCSS*/
   /*Contact Main*/
   /*Cookie Modal*/
   /*Contact & Wedding Forms*/
@@ -15,6 +18,7 @@ body {
   /*Contact Modal*/
   /*Contact Toast*/
   /*Contact toast & modal close buttons*/
+  /*PARTE ALEXANDRA*/
   /*Footer*/
 }
 body #btn-back-to-top {
@@ -31,39 +35,65 @@ body #btn-back-to-top svg {
 body #btn-back-to-top:active {
   border: 0px solid;
 }
+body .modal button {
+  background-color: #953154;
+  border-color: #953154;
+  color: white;
+}
+body .modal button[type=reset] {
+  background-color: #e59eb9;
+  color: #953154;
+}
+body .modal button[type=reset]:hover {
+  background-color: #953154;
+  color: white;
+}
+body .modal button:not(.btn-close):hover {
+  background-color: #e59eb9;
+  color: #953154;
+  border-color: #953154;
+}
+body .modal .modal-body button:active, body .modal .modal-footer button:active {
+  background-color: #e59eb9;
+  color: #953154;
+  border-color: #953154;
+  box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
+}
 body .modal .modal-header {
   background-color: #953154;
   color: white;
 }
-body .modal .modal-body input, body .modal .modal-body h2, body .modal .modal-body select {
+body .modal .modal-header .btn-close:focus {
+  box-shadow: 0 0 0 0 rgba(229, 158, 185, 0.25);
+}
+body .modal .modal-body input, body .modal .modal-body h2, body .modal .modal-body select, body .modal .modal-body label, body .modal .modal-body [id^=inputGroupPrepend] {
   color: #953154;
 }
-body .modal .modal-body input[type=checkbox]:checked, body .modal .modal-body h2[type=checkbox]:checked, body .modal .modal-body select[type=checkbox]:checked {
-  background-color: #953154;
+body .modal .modal-body input:focus, body .modal .modal-body h2:focus, body .modal .modal-body select:focus, body .modal .modal-body label:focus, body .modal .modal-body [id^=inputGroupPrepend]:focus {
   border-color: #953154;
   box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
 }
-body .modal .modal-body input:focus, body .modal .modal-body h2:focus, body .modal .modal-body select:focus {
-  border-color: #953154;
-  box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
-}
-body .modal .modal-body button {
+body .modal .modal-body input[type=checkbox]:checked, body .modal .modal-body h2[type=checkbox]:checked, body .modal .modal-body select[type=checkbox]:checked, body .modal .modal-body label[type=checkbox]:checked, body .modal .modal-body [id^=inputGroupPrepend][type=checkbox]:checked {
   background-color: #953154;
   border-color: #953154;
+}
+body .modal .modal-body table thead th, body .modal .modal-body table #total {
   color: white;
-}
-body .modal .modal-body button:hover {
-  background-color: #e59eb9;
-  color: #953154;
-}
-body .modal .modal-footer button {
   background-color: #953154;
-  border-color: #953154;
-  color: white;
 }
-body .modal .modal-footer button:hover {
-  background-color: #e59eb9;
+body .modal .modal-body table tr {
+  border-color: #953154;
+}
+body .modal .modal-body table tr td {
   color: #953154;
+  background-color: #fde4fe;
+}
+body .modal .modal-body table tbody {
+  border-top-color: #953154;
+}
+body .modal .modal-body table tbody th, body .modal .modal-body table tbody #totalPrice {
+  color: #953154;
+  background-color: #e59eb9;
 }
 body header {
   background-color: #953154;
@@ -144,41 +174,102 @@ body .nav-desktop .nav-pills li ul li a:hover {
   background-color: #953154;
 }
 body main {
+  /*PARTE ALFONSO*/
   /*Wedding Banner Section*/
 }
 body main section {
-  background-color: #d9aebd;
-  border-radius: 20px;
   /*SECTION 1*/
   /*SECTION 2*/
 }
-body main section #carouselExampleCaptions .carousel-indicators button {
+body main section h5 {
+  color: #953154;
+}
+body main section #flowerCarousel {
+  background-color: #d9aebd;
+  border-radius: 10px;
+  /* .carousel-item {min-height: 550px;} */
+}
+body main section #flowerCarousel .carousel-indicators button {
   background-color: #953154;
 }
-body main section #carouselExampleCaptions img {
-  max-height: 300px;
-}
-body main section #carouselExampleCaptions .carousel-caption {
+body main section #flowerCarousel .carousel-caption {
   color: #953154;
   right: 0;
   left: 0;
 }
-body main section #carouselExampleCaptions .carousel-caption a {
+body main section #flowerCarousel .carousel-caption a {
   color: #953154;
 }
-body main section #carouselExampleCaptions .carousel-caption a:hover {
+body main section #flowerCarousel .carousel-caption a:hover {
   color: white;
 }
-body main section #carouselExampleCaptions button span {
+body main section #flowerCarousel button span {
   background-color: #953154;
   border-radius: 10px;
 }
-body main section .container .col-6 {
+body main section .card-img-overlay {
+  background-color: rgba(149, 49, 84, 0.8);
+  bottom: 50%;
+}
+body main section .events {
+  background-color: #d9aebd;
+  border-radius: 10px;
+}
+body main section .events .col-md-6 {
   transition: transform 0.2s;
   color: #953154;
 }
-body main section .container .col-6:hover {
+body main section .events .col-md-6:hover {
   transform: scale(1.1);
+}
+body main section .events nav ul a {
+  background-color: #e59eb9;
+  color: #953154;
+  border-color: #953154;
+}
+body main section .events nav ul .active a {
+  background-color: #953154;
+  color: white;
+  border-color: #953154;
+}
+body main section .events nav ul a:hover {
+  background-color: #fde4fe;
+  color: #953154;
+}
+body main section .events nav ul a:active, body main section .events nav ul a:focus {
+  border-color: #953154;
+  box-shadow: 0 0 0 0.25rem rgba(122, 20, 59, 0.25);
+}
+body main section .faqs a, body main section .faqs button {
+  background-color: #953154;
+  border-color: #953154;
+  color: white;
+}
+body main section .faqs a:not(.collapsed), body main section .faqs button:not(.collapsed) {
+  background-color: #953154;
+  color: white;
+}
+body main section .faqs a:not(.collapsed)::after, body main section .faqs button:not(.collapsed)::after {
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+body main section .faqs a::after, body main section .faqs button::after {
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+body main section .faqs a:hover, body main section .faqs button:hover {
+  background-color: #e59eb9;
+  color: #953154;
+  border-color: #953154;
+}
+body main section .faqs a:active, body main section .faqs a:focus, body main section .faqs button:active, body main section .faqs button:focus {
+  border-color: #953154;
+  box-shadow: 0 0 0 0.25rem rgba(122, 20, 59, 0.25);
+}
+body main section .faqs .tips:hover {
+  background-color: #fde4fe;
+}
+body main section .faqs .accordion-body {
+  background-color: #e59eb9;
+  color: #953154;
 }
 body main #wedding-section {
   background-image: url(../imgs/Weddings/weddingBanner.png);
@@ -208,7 +299,6 @@ body main #wedding-section div span {
   letter-spacing: 5px;
   text-align: center;
 }
-
 body #cookie hr, body #cookie a, body #cookie label {
   color: #953154;
 }
@@ -237,7 +327,6 @@ body .mContact form .btn:active, body #cookie form .btn:active {
   background-color: rgba(149, 49, 84, 0.3960784314);
   border-color: #fde4fe;
 }
-
 body .mContact .nav-link {
   background-color: rgba(149, 49, 84, 0.6392156863);
   border-color: #e59eb9;
