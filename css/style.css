@@ -9,7 +9,7 @@ body {
   /*Header*/
   /*Desktop navbar*/
   /*Index Main*/
-  /*Contact & Weeding SCSS*/
+  /*Wedding & Contact SCSS*/
   /*Contact SCSS*/
   /*Contact Main*/
   /*Cookie Modal*/
@@ -298,6 +298,29 @@ body main #wedding-section div span {
   font-family: "Aboreto", serif;
   letter-spacing: 5px;
   text-align: center;
+}
+body main #wedding-main-elements #wedding-info {
+  background-color: #d9aebd;
+}
+body main #wedding-main-elements .fs-5, body main #wedding-main-elements h5, body main #wedding-main-elements .fs-4, body main #wedding-main-elements h4 {
+  color: #953154;
+}
+body main #wedding-main-elements p {
+  color: #fff;
+}
+body main #wedding-main-elements p span {
+  color: #953154;
+}
+body main #wedding-main-elements .nav-pills .nav-link.active,
+body main #wedding-main-elements .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #953154;
+}
+body main #wedding-main-elements .navbar-nav-scroll {
+  scrollbar-width: none;
+}
+body main #wedding-main-elements .navbar-nav-scroll::-webkit-scrollbar {
+  display: none;
 }
 body .mContact form .btn, body #cookie form .btn {
   background-color: rgba(149, 49, 84, 0.6392156863);
