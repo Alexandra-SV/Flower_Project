@@ -270,7 +270,24 @@ body {
                 }
             }
         }
+        #wedding-main-elements{
+            #wedding-info{background-color: $dusty-pink;}
+            .fs-5, h5, .fs-4, h4{color: $dark-pink;}
+            p{color: #fff;
+                span{color: $dark-pink;}
+            }
+            .nav-pills .nav-link.active,
+            .nav-pills .show > .nav-link {
+                color: #fff;
+                background-color: $dark-pink;
+            }
+            .navbar-nav-scroll {
+                scrollbar-width: none; //for firefox
+                &::-webkit-scrollbar {display: none;}//for chrome
+            }
+        }
     }
+/*Wedding & Contact SCSS*/  
     .mContact form , #cookie form{
         .btn {
             background-color: $old-dusty-pink;
