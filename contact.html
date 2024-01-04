@@ -346,7 +346,7 @@
                           <div class="col-sm-12 col-md-5 mt-2">
                               <input type="text" id="incidentFullName" class="form-control" aria-label="Full Name"
                                   pattern="[A-Za-z\s]+" placeholder="Full name" required>
-                              <p class="invalid-feedback">
+                              <p class="invalid-feedback fs-5">
                                   Use a format that matches the one requested. ( a-zA-Z )
                               </p>
                           </div>
@@ -355,7 +355,7 @@
                                   <span class="input-group-text text-white" id="basic-addon2">@</span>
                                   <input type="email" id="incidentEmail" class="form-control" aria-label="Email" placeholder="Email"
                                       required>
-                                  <p class="invalid-feedback">
+                                  <p class="invalid-feedback fs-5">
                                       Use a format that matches the one requested. ( asd@ad.asd )
                                   </p>
                               </div>
@@ -371,7 +371,7 @@
                               <label for="code" class="form-label fw-bold fs-5">Order Number *</label>
                               <input type="text" id="code" class="form-control mb-3" aria-label="Order Number" placeholder="2Fd3D7"
                                   pattern="[A-Za-z1-9]+" required>
-                              <p class="invalid-feedback">
+                              <p class="invalid-feedback fs-5">
                                   Use a format that matches the one requested. ( a-zA-Z1-9 )
                               </p>
                           </div>
@@ -387,7 +387,7 @@
                                   aria-label="Resolution Preferences"></select>
                           </div>
                       </div>
-                      <div class="my-2">
+                      <div id="Supporting-file" class="my-2">
                         <label for="Document" class="input-group-text btn fw-bold fs-5 text-wrap d-sm-none">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
                                 <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
@@ -401,7 +401,7 @@
                           <label for="incidentDescription" class="form-label fw-bold fs-5">Description of the incident *</label>
                           <textarea id="incidentDescription" class="form-control" aria-label="Description of the incident"
                               required></textarea>
-                          <p class="invalid-feedback">
+                          <p class="invalid-feedback fs-5">
                               Please complete this section.
                           </p>
                       </div>
@@ -586,10 +586,13 @@
   </footer>
 </body>
 <!--Bootstrap js-->
-<script src="libs/js/bootstrap.bundle.js"></script>
+  <script src="libs/js/bootstrap.bundle.js"></script>
 <!-- For dropdown and tabs functionality -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 <!--Our js-->
-<script src="js/contact.js"></script>
-<script src="js/flower.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/flower.js"></script>
 </html>

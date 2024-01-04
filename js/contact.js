@@ -123,6 +123,7 @@ resolutions = [
              var user=document.getElementById('dropdownUser').value;
              var comment=document.getElementById('dropdownComment').value;
              sessionStorage.setItem(user,comment);
+             form.reset();
              commentLoad();
          }
      }
