@@ -1,7 +1,12 @@
-%absolute {
-    position: absolute;
+%bubblegum-bg-dark-text {
+  background-color: $bubblegum-pink;
+  color: $dark-pink;
 }
-%center{
-  text-align: center;
-  vertical-align: middle;
+%dark-bg-white-text {
+  background-color: $dark-pink;
+  color: white;
+}
+%light-bg-dark-text {
+  background-color: $light-pink;
+  color: $dark-pink;
 }
