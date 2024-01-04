@@ -32,8 +32,8 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <!--SIGN IN FORM-->
-          <form class="row g-3 needs-validation" novalidate>
+          <!--Sign in form-->
+          <form class="row g-3 needs-validation" action="#" method="POST" novalidate>
             <div class="col-md-6">
               <label for="validationCustomSignInEmail" class="form-label d-none"></label>
               <input type="email" class="form-control" id="validationCustomSignInEmail" placeholder="Email" required>
@@ -50,7 +50,7 @@
             </div>
             <button class="w-100 mb-2 btn btn-lg rounded-3" type="submit">Sign in</button>
           </form>
-          <!--END SIGN IN FORM-->
+          <!--End sign in form-->
           <hr class="my-4">
           <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
           <button class="w-100 py-2 mb-2 btn rounded-3" type="submit">
@@ -83,7 +83,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <!--SIGN UP FORM-->
+          <!--Sign up form-->
           <form class="row g-3 needs-validation" novalidate>
             <div class="col-md-6">
               <label for="validationCustomFirstName" class="form-label">First name</label>
@@ -115,9 +115,9 @@
                 <span class="input-group-text" id="inputGroupPrepend2">*</span>
                 <input type="password" class="form-control" id="validationCustomPassword" aria-describedby="inputGroupPrepend" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[?!*%#])[\w?!*%#]{8,}$" data-bs-toggle="tooltip" data-bs-placement="top"
                 data-bs-custom-class="custom-tooltip"
-                data-bs-title="Minimum 8 characters, one letter, number and symbol" required>
+                data-bs-title="Minimum 10 characters, one letter, number and symbol" required>
                 <div class="invalid-feedback">
-                  Please provide a password at least 8 characters long, with a minimum of one letter, number and symbol.
+                  Please provide a password at least 10 characters long, with a minimum of one letter, number and symbol.
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@
             </div>
             <div class="col-md-6">
               <label for="validationCustomPhone" class="form-label">Phone number</label>
-              <input type="tel" class="form-control" id="validationCustomPhone" required>
+              <input type="tel" class="form-control" id="validationCustomPhone" maxlength="9" minlength="9" required>
               <div class="invalid-feedback">
                 Please provide a valid phone number.
               </div>
@@ -159,7 +159,7 @@
               <button class="btn" type="reset">Reset</button>
             </div>
           </form>
-          <!--END SIGN UP FORM-->
+          <!--End sign up form-->
         </div>
         <div class="modal-footer">
           <small class="text-body-secondary">Have an account?</small>
@@ -253,27 +253,71 @@
       </div>
     </div>
   </div>
+  <!--END CART MODAL-->
+  <!--SEARCH MODAL-->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="searchModalLabel">Search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="searchGroup container">
+            <div class="row flex-nowrap justify-content-center">
+              <div class="col-10 col-sm-11">
+                <div class="input-group">
+                  <input type="text" class="form-control" aria-label="Search" aria-describedby="button-search-mobile" placeholder="What are you looking for?">
+                  <button class="btn" type="button" id="button-search-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="col-2 col-sm-1 d-none">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="placeholder-glow d-none" data-bs-dismiss="modal">
+                <a href="#" class="placeholder col-12"></a>
+                <a href="#" class="placeholder col-12"></a>
+                <a href="#" class="placeholder col-12"></a>
+                <a href="#" class="placeholder col-12"></a>
+                <a href="#" class="placeholder col-12"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END SEARCH MODAL-->
   <!--HEADER-->
   <header class="py-2">
-    <!--Nav burger-->
+    <!--Header mobile-->
     <nav class="navbar navbar-expand-lg navbar-dark d-md-none nav-burger py-3" aria-label="Offcanvas navbar large">
       <div class="container-fluid">
+        <!--Offcanvas burger nav-->
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
           </svg>
         </button>
         <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <!--Offcanvas header-->
           <div class="offcanvas-header flex-column">
             <button type="button" class="btn-close btn-close-white align-self-end py-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="Logo" id="logo-nav" class="img-fluid offcanvas-title"></a>
           </div>
+          <!--End offcanvas header-->
+          <!--Offcanvas body-->
           <hr class="border border-3 border-white opacity-100 m-0">
           <div class="offcanvas-body py-0">
             <ul class="navbar-nav justify-content-evenly flex-grow-1 text-center fs-5 fw-semibold h-100">
-              <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li> -->
               <li class="nav-item m-0">
                 <a class="nav-link" href="#">Best Sellers</a>
               </li>
@@ -281,7 +325,7 @@
                 <a class="nav-link" href="#">Events</a>
               </li>
               <li class="nav-item m-0">
-                <a class="nav-link" href="#">Season</a>
+                <a class="nav-link" href="#">Seasons</a>
               </li>
               <li class="nav-item m-0">
                 <a class="nav-link" href="#">Flowers</a>
@@ -294,6 +338,8 @@
               </li>
             </ul>
           </div>
+          <!--End offcanvas body-->
+          <!--Offcanvas footer-->
           <hr class="border border-3 border-white opacity-100 m-0">
           <div class="offcanvas-footer d-flex justify-content-around py-4 text-white fw-semibold fs-5 text-center">
             <button class="nav-link link-light" data-bs-target="#signInModal" data-bs-toggle="modal">Sign In</button>
@@ -302,10 +348,12 @@
             </svg>
             <button class="nav-link link-light" data-bs-target="#signUpModal" data-bs-toggle="modal">Sign Up</button>
           </div>
+          <!--End offcanvas footer-->
           <hr class="border border-3 border-white opacity-100 m-0">
         </div>
-        <div class="mx-1 mobile-buttons">
-          <a href="#" class="p-1 text-decoration-none">
+        <!--End offcanvas burger nav-->
+        <div class="mx-1">
+          <a href="#" class="p-1 text-decoration-none" data-bs-toggle="modal" data-bs-target="#searchModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
             </svg>
@@ -318,22 +366,23 @@
         </div>
       </div>
     </nav>
-    <!--End nav burger-->
-    <!--Header logo and nav computer-->
+    <!--End header mobile-->
+    <!--Header desktop-->
     <div class="d-none d-md-flex row m-0 flex-nowrap justify-content-between align-items-center">
       <div class="col-4 offset-sm-4 text-center">
         <a class="text-body-emphasis text-decoration-none" href="index.html"><img src="imgs/logo.png" alt="Logo" id="logo-header" class="img-fluid"></a>
       </div>
+      <!--Nav header desktop-->
       <nav class="col-4 nav-header d-flex justify-content-end">
         <div class="input-group">
-          <input type="text" class="form-control" aria-label="Search" aria-describedby="button-search">
-          <button class="btn" type="submit" id="button-search">
+          <input type="text" class="form-control" aria-label="Search" aria-describedby="button-search-desktop">
+          <button class="btn" type="button" id="button-search-desktop">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#953154" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
             </svg>
           </button>
         </div>
-        <div class="m-2 mobile-buttons">
+        <div class="m-2">
           <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#cartModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-bag-fill" viewBox="0 0 16 16">
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
@@ -346,24 +395,23 @@
           </a>
         </div>
       </nav>
+      <!--End nav header desktop-->
     </div>
-    <!--End header logo and nav computer-->
+    <!--End header desktop-->
   </header>
   <!--END HEADER-->
   <hr class="border border-3 border-white opacity-100 m-0">
   <!--DESKTOP NAV-->
   <nav class="d-none d-md-flex justify-content-center py-2 nav-desktop">
     <ul class="nav nav-pills fw-semibold">
-      <!-- <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li> -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
-        Best Sellers</a>
+        <a class="nav-link" href="#">Best Sellers</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Events</a>
       </li>
       <li class="nav-item">
-        <a class="btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Season</a>
+        <a class="btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Seasons</a>
         <ul class="dropdown-menu">
           <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Winter</a></li>
           <li class="border-bottom border-white"><a class="dropdown-item w-auto my-1" href="#">Spring</a></li>
@@ -386,19 +434,20 @@
   <!--MAIN-->
   <main >
     <section class="container">
-      <div class="row g-5 m-0">
-        <div class="col-lg-6">
+      <div class="row">
+        <!--Carousel-->
+        <article class="order-lg-first col-lg-7">
           <div id="flowerCarousel" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#flowerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#flowerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#flowerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner px-3">
+            <div class="carousel-inner px-3 my-5">
               <h5 class="fw-bold py-2">Seasonal flowers</h5>
               <div class="carousel-item active">
                 <div class="text-center m-5">
-                  <div class="row align-items-center">
+                  <div class="row align-items-center pb-3">
                     <div class="col-xl-6">
                       <a href="#" class="text-decoration-none">
                         <img class="w-75" src="imgs/Flowers/camellia.png" alt="Camellia">
@@ -408,45 +457,45 @@
                       <div class="carousel-caption position-relative mt-5">
                         <h2 class="fw-bold">Camellia</h2>
                         <p class="d-none d-sm-block fs-5">Queens of the winter flowers, Camellias are attractive evergreen shrubs highly prized for the beauty of their exquisite blooms. <a href="#">Read more...</a></p>
-                      </div><!--enddetails-->
-                    </div><!--endcol-->
-                  </div><!--endrow-->
-                </div><!--endcontainer-->
-              </div><!--endcarousel-item-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="carousel-item">
                 <div class="text-center m-5">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
+                  <div class="row align-items-center pb-3">
+                    <div class="col-xl-6">
                       <a href="#" class="text-decoration-none">
                         <img class="w-75" src="imgs/Flowers/gardenia.png" alt="Gardenia">
                       </a>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-xl-6">
                       <div class="carousel-caption position-relative mt-5">
                         <h2 class="fw-bold">Gardenia</h2>
                         <p class="d-none d-sm-block fs-5">Beloved for their intoxicating fragrance and attractive, Gardenias are irresistible heat-loving evergreen shrubs or trees. <a href="#">Read more...</a></p>
-                      </div><!--enddetails-->
-                    </div><!--endcol-->
-                  </div><!--endrow-->
-                </div><!--endcontainer-->
-              </div><!--endcarousel-item-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="carousel-item">
                 <div class="text-center m-5">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
+                  <div class="row align-items-center pb-3">
+                    <div class="col-xl-6">
                       <a href="#" class="text-decoration-none">
                         <img class="w-75" src="imgs/Flowers/hellebore.png" alt="Hellebore">
                       </a>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-xl-6">
                       <div class="carousel-caption position-relative mt-5">
                         <h2 class="fw-bold">Hellebore</h2>
                         <p class="d-none d-sm-block fs-5">Hellebores are classic plants for winter interest, with elegant, nodding blooms in shades of green, white, pink or ruby. <a href="#">Read more...</a></p>
-                      </div><!--enddetails-->
-                    </div><!--endcol-->
-                  </div><!--endrow-->
-                </div><!--endcontainer-->
-              </div><!--endcarousel-item-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <button class="carousel-control-prev justify-content-center" type="button" data-bs-target="#flowerCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -457,110 +506,157 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-        </div>
-        <div class="col-lg-6 align-self-center">
+        </article>
+        <!--End carousel-->
+        <!--Card and lg faqs-->
+        <article class="order-first col-lg-5 mt-5">
+          <!--Card-->
           <div class="card text-bg-dark border-0">
-            <img src="imgs/store.jpg" class="card-img" alt="Store">
+            <img src="imgs/store.jpg" class="card-img img-fluid" alt="Store">
             <div class="card-img-overlay">
               <h5 class="card-title">New Store Opening!</h5>
-              <p class="card-text">Come join us to the inauguration of our new location in Barcelona and enjoy some nice gifts and coupons. <a href="#" class="text-white">Read more...</a></p>
+              <span class="card-text">Come join us to the inauguration of our new location in Barcelona and enjoy some nice gifts and coupons. <a href="#" class="text-white">Read more...</a></span>
               <p class="card-text"><small>Last updated 3 mins ago</small></p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="container mt-3">
-      <div class="row g-5 m-0">
-        <div class="col-md-4 faqs mb-5 mt-0 align-self-center">
-          <h5 class="fw-bold py-2">FAQs</h5>
-          <div class="accordion accordion-flush" id="accordionFAQ">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  What sets your flower shop apart from others?
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                <div class="accordion-body">We take pride in our fresh and high-quality flowers, personalized service, and attention to detail. Our experienced florists are dedicated to creating stunning arrangements for every customer.</div>
+          <!--End card-->
+          <!--Lg faqs-->
+          <div class="faqs d-none d-lg-block d-xl-none my-5 align-self-center">
+            <h5 class="fw-bold py-2">FAQs</h5>
+            <div class="accordion accordion-flush" id="accordionFAQLg">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneLg" aria-expanded="false" aria-controls="flush-collapseOneLg">
+                    What sets your flower shop apart from others?
+                  </button>
+                </h2>
+                <div id="flush-collapseOneLg" class="accordion-collapse collapse" data-bs-parent="#accordionFAQLg">
+                  <div class="accordion-body">We take pride in our fresh and high-quality flowers, personalized service, and attention to detail. Our experienced florists are dedicated to creating stunning arrangements for every customer.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoLg" aria-expanded="false" aria-controls="flush-collapseTwoLg">
+                    Do you offer international flower delivery?
+                  </button>
+                </h2>
+                <div id="flush-collapseTwoLg" class="accordion-collapse collapse" data-bs-parent="#accordionFAQLg">
+                  <div class="accordion-body">At the moment, we only provide local and national flower delivery services. Check our delivery information for areas covered.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeLg" aria-expanded="false" aria-controls="flush-collapseThreeLg">
+                    How do I care for my flowers to make them last longer?
+                  </button>
+                </h2>
+                <div id="flush-collapseThreeLg" class="accordion-collapse collapse" data-bs-parent="#accordionFAQLg">
+                  <div class="accordion-body">Absolutely thrilled that you asked! We've curated a subpage dedicated to transforming your flower care routine into a blooming success story.
+                  <a href="#" class="btn m-3 tips">Check our plant tips and tricks!</a></div>
+                </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Do you offer international flower delivery?
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                <div class="accordion-body">At the moment, we only provide local and national flower delivery services. Check our delivery information for areas covered.</div>
+          </div>
+          <!--End lg faqs-->
+        </article>
+        <!--End card and lg faqs-->
+        <!--Events-->
+        <article class="col-xl-7">
+          <div class="events fw-bold">
+            <h5 class="fw-bold p-3">Events</h5>
+            <div class="row text-center overflow-hidden" id="events1">
+              <div class="col-md-6 p-4">
+                <a href="wedding.html"><img src="imgs/Events/weddings.png" alt="Weddings" class="img-fluid rounded-circle shadow"></a>
+                <p>Weddings</p>
+              </div>
+              <div class="col-md-6 p-4">
+                <a href="#"><img src="imgs/Events/banquets.png" alt="Banquets" class="img-fluid rounded-circle shadow"></a>
+                <p>Banquets</p>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  How do I care for my flowers to make them last longer?
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                <div class="accordion-body">Absolutely thrilled that you asked! We've curated a subpage dedicated to transforming your flower care routine into a blooming success story.
-                <a href="#" class="btn m-3 tips">Check our plant tips and tricks!</a></div>
+            <div class="row text-center d-none overflow-hidden" id="events2">
+              <div class="col-md-6 p-4">
+                <a href="#"><img src="imgs/Events/funerals.png" alt="Funerals" class="img-fluid rounded-circle shadow"></a>
+                <p>Funerals</p>
+              </div>
+              <div class="col-md-6 p-4">
+                <a href="#"><img src="imgs/Events/office.png" alt="Offices" class="img-fluid rounded-circle shadow"></a>
+                <p>Offices</p>
+              </div>
+            </div>
+            <div class="row text-center d-none overflow-hidden" id="events3">
+              <div class="col-md-6 p-4">
+                <a href="#"><img src="imgs/Events/holidays.png" alt="Holidays" class="img-fluid rounded-circle shadow"></a>
+                <p>Holidays</p>
+              </div>
+              <div class="col-md-6 p-4">
+                <a href="#"><img src="imgs/Events/parties.png" alt="Parties" class="img-fluid rounded-circle shadow"></a>
+                <p>Parties</p>
+              </div>
+            </div>
+            <nav aria-label="Events Pages" class="d-flex justify-content-center">
+              <ul class="pagination pagination-md">
+                <li class="page-item active" aria-current="page">
+                  <a class="page-link" href="#events1">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#events2">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#events3">3</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+        <!--End events-->
+        <!--Faqs-->
+        <article class="col-lg-5 mb-5">
+          <div class="faqs d-lg-none d-xl-block mt-5 align-self-center">
+            <h5 class="fw-bold py-2">FAQs</h5>
+            <div class="accordion accordion-flush" id="accordionFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    What sets your flower shop apart from others?
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                  <div class="accordion-body">We take pride in our fresh and high-quality flowers, personalized service, and attention to detail. Our experienced florists are dedicated to creating stunning arrangements for every customer.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Do you offer international flower delivery?
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                  <div class="accordion-body">At the moment, we only provide local and national flower delivery services. Check our delivery information for areas covered.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    How do I care for my flowers to make them last longer?
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                  <div class="accordion-body">Absolutely thrilled that you asked! We've curated a subpage dedicated to transforming your flower care routine into a blooming success story.<br>
+                  <a href="#" class="tips">Check our plant tips and tricks!</a></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-8 fw-bold events align-self-center mt-0 mb-5">
-          <h5 class="fw-bold py-2">Events</h5>
-          <div class="row text-center" id="events1">
-            <div class="col-md-6 p-4">
-              <a href="wedding.html"><img src="imgs/Events/weddings.png" alt="Weddings" class="img-fluid rounded-circle shadow"></a>
-              <p>Weddings</p>
-            </div>
-            <div class="col-md-6 p-4">
-              <a href="#"><img src="imgs/Events/banquets.png" alt="Banquets" class="img-fluid rounded-circle shadow"></a>
-              <p>Banquets</p>
-            </div>
-          </div>
-          <div class="row text-center d-none" id="events2">
-            <div class="col-md-6 p-4">
-              <a href="#"><img src="imgs/Events/funerals.png" alt="Funerals" class="img-fluid rounded-circle shadow"></a>
-              <p>Funerals</p>
-            </div>
-            <div class="col-md-6 p-4">
-              <a href="#"><img src="imgs/Events/office.png" alt="Offices" class="img-fluid rounded-circle shadow"></a>
-              <p>Offices</p>
-            </div>
-          </div>
-          <div class="row text-center d-none" id="events3">
-            <div class="col-md-6 p-4">
-              <a href="#"><img src="imgs/Events/holidays.png" alt="Holidays" class="img-fluid rounded-circle shadow"></a>
-              <p>Holidays</p>
-            </div>
-            <div class="col-md-6 p-4">
-              <a href="#"><img src="imgs/Events/parties.png" alt="Parties" class="img-fluid rounded-circle shadow"></a>
-              <p>Parties</p>
-            </div>
-          </div>
-          <nav aria-label="Events Pages" class="d-flex justify-content-center">
-            <ul class="pagination pagination-md">
-              <li class="page-item active" aria-current="page">
-                <a class="page-link" href="#events1">1</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#events2">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#events3">3</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        </article>
+        <!--End faqs-->
       </div>
     </section>
   </main>
   <!--END MAIN-->
-  <hr class="border border-3 border-white opacity-100 m-0">
+  <hr class="border border-3 border-white opacity-100 m-0 mt-5">
   <!--FOOTER-->
-  <footer class="py-3 my-0">
+  <footer class="py-3">
     <ul class="nav justify-content-center">
       <li class="nav-item"><a href="#" class="nav-link px-2 link-light">About</a></li>
       <li class="nav-item"><a href="contact.html" class="nav-link px-2 link-light">Contact</a></li>

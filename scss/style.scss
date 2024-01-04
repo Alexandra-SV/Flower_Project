@@ -8,6 +8,7 @@ body {
     font-family: $alexandria;
 /*Back to top button*/
     #btn-back-to-top {
+        z-index: 1;
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -22,32 +23,26 @@ body {
 /*Sign in/out modals*/
     .modal{
         button{
-            background-color: $dark-pink;
+            @extend %dark-bg-white-text;
             border-color: $dark-pink;
-            color: white;
             &[type='reset']{
-                background-color: $bubblegum-pink;
-                color: $dark-pink;
+                @extend %bubblegum-bg-dark-text;
                 &:hover{
-                    background-color: $dark-pink;
-                    color: white;
+                    @extend %dark-bg-white-text;
                 }
             }
             &:not(.btn-close):hover{
-                background-color: $bubblegum-pink;
-                color: $dark-pink;
+                @extend %bubblegum-bg-dark-text;
                 border-color: $dark-pink;
             }
         }
         .modal-body button:active, .modal-footer button:active{
-            background-color: $bubblegum-pink;
-            color: $dark-pink;
+            @extend %bubblegum-bg-dark-text;
             border-color: $dark-pink;
             box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
         }
         .modal-header{
-            background-color: $dark-pink;
-            color: white;
+            @extend %dark-bg-white-text;
             .btn-close:focus {box-shadow: 0 0 0 0 rgba(229, 158, 185, 0.25);}
         }
         .modal-body{
@@ -63,10 +58,7 @@ body {
                 }
             }
             table{
-                thead th, #total{
-                    color: white;
-                    background-color: $dark-pink;
-                }
+                thead th, #total{@extend %dark-bg-white-text;}
                 tr{
                     border-color: $dark-pink;
                     td{
@@ -76,12 +68,11 @@ body {
                 }
                 tbody{
                     border-top-color: $dark-pink;
-                    th, #totalPrice{
-                        color: $dark-pink;
-                        background-color: $bubblegum-pink;
-                    }
+                    th, #totalPrice{@extend %bubblegum-bg-dark-text;}
                 }
             }
+            .spinner-border{color: $dark-pink;}
+            .placeholder-glow a{background-color: $dark-pink;}
         }
     }
 /*Header*/
@@ -109,7 +100,7 @@ body {
                         margin: 30px 0px 0px 30px;
                         a {
                             color: $dark-pink;
-                            &:hover {color: white;}
+                            @include hover-color(white);
                         }
                     }
                 }
@@ -141,16 +132,15 @@ body {
             a {
                 color: $dark-pink;
                 margin: 0px 10px 0px 10px;
-                &:hover {color: white;}
+                @include hover-color(white);
             }
+            /*Dropdown*/
             ul {
                 background-color: $bubblegum-pink;
                 border-radius: 0px;
                 border: none;
-                li a {
-                    color: $dark-pink;
-                    &:hover {background-color: $dark-pink;}
-                }
+                li a {color: $dark-pink;}
+                li:hover, li a:hover {@extend %dark-bg-white-text;}
             }
         }
     }
@@ -163,15 +153,14 @@ body {
                 background-color: $dusty-pink;
                 border-radius: 10px;
                 .carousel-indicators button {background-color: $dark-pink;}
-                /* .carousel-item {min-height: 550px;} */
                 .carousel-caption {
-                    a {
-                        color: $dark-pink;
-                        &:hover {color: white;}
-                    }
                     color: $dark-pink;
                     right: 0;
                     left: 0;
+                    a {
+                        color: $dark-pink;
+                        @include hover-color(white);
+                    }
                 }
                 button span {
                     background-color: $dark-pink;
@@ -192,41 +181,29 @@ body {
                     &:hover {transform: scale(1.1);}
                 }
                 nav ul{
-                    a{
-                        background-color: $bubblegum-pink;
-                        color: $dark-pink;
-                        border-color: $dark-pink;
-                    }
-                    .active a{
-                        background-color: $dark-pink;
-                        color: white;
-                        border-color: $dark-pink;
-                    }
+                    a, .active a, a:hover, a:active, a:focus{border-color: $dark-pink;}
+                    a{@extend %bubblegum-bg-dark-text;}
+                    .active a{@extend %dark-bg-white-text;}
+                    a:active, a:focus{box-shadow: 0 0 0 0.25rem rgba(122, 20, 59, 0.25);}
                     a:hover{
                         background-color: $light-pink;
                         color: $dark-pink;
-                    }
-                    a:active, a:focus{
-                        border-color: $dark-pink;
-                        box-shadow: 0 0 0 0.25rem rgba(122, 20, 59, 0.25);
                     }
                 }
             }
             .faqs{
                 a, button{
-                    background-color: $dark-pink;
+                    @extend %dark-bg-white-text;
                     border-color: $dark-pink;
-                    color: white;
                     &:not(.collapsed){
-                        background-color: $dark-pink;
-                        color: white;
+                        @extend %dark-bg-white-text;
                         &::after{--bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");}
                     }
                     &::after{
                         --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
                     }
                     &:hover{
-                        background-color: $bubblegum-pink;
+                        background-color: $dusty-pink;
                         color: $dark-pink;
                         border-color: $dark-pink;
                     }
@@ -238,10 +215,22 @@ body {
                 .tips:hover{
                     background-color: $light-pink;
                 }
-                .accordion-body{
-                    background-color: $bubblegum-pink;
-                    color: $dark-pink;
+                .accordion{
+                    --bs-accordion-bg: transparent;
+                    .accordion-item:first-child{
+                        button{
+                            border-top-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                        }
+                    }
+                    .accordion-item:last-child{
+                        button, .accordion-body{
+                            border-bottom-left-radius: 10px;
+                            border-bottom-right-radius: 10px;
+                        }
+                    }
                 }
+                .accordion-body{@extend %bubblegum-bg-dark-text;}
             }
         }
 /*PARTE ALFONSO*/
@@ -325,7 +314,7 @@ body {
             }
         }
     }
-/*Wedding & Contact SCSS*/  
+/*Wedding & Contact SCSS*/
     .mContact form , #cookie form{
         .btn {
             background-color: $old-dusty-pink;
@@ -424,9 +413,8 @@ body {
             }
         }
     }
-    .tooltip-inner {
-            background-color: $dark-pink; /* Cambia este valor al tono de rosa que desees */
-            font-weight:bold;
+    .tooltip-inner{
+            background-color: $dark-pink;
             font-size: large;
         }
     /*Contact & Wedding Forms*/
