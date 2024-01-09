@@ -1,6 +1,6 @@
 /*Colors*/
 /*Fonts*/
-body main section .faqs .accordion-body, body main section .events nav ul a, body .modal .modal-body table tbody th, body .modal .modal-body table tbody #totalPrice, body .modal .modal-body button:active, body .modal .modal-footer button:active, body .modal button:not(.btn-close):hover, body .modal button[type=reset] {
+body main section .faqs .accordion-body, body main section .events nav ul a, body .modal .modal-body table tbody th, body .modal .modal-body table tbody #totalPrice, body .modal .modal-body .list-group .list-group-item-action, body .modal .modal-body button:active, body .modal .modal-footer button:active, body .modal button:not(.btn-close):hover, body .modal button[type=reset] {
   background-color: #e59eb9;
   color: #953154;
 }
@@ -70,6 +70,9 @@ body .modal .modal-body input[type=checkbox]:checked, body .modal .modal-body h2
   background-color: #953154;
   border-color: #953154;
 }
+body .modal .modal-body .list-group .list-group-item-action {
+  border-color: #953154;
+}
 body .modal .modal-body table tr {
   border-color: #953154;
 }
@@ -89,8 +92,11 @@ body .modal .modal-body .placeholder-glow a {
 body header {
   background-color: #953154;
 }
+body header .badge {
+  background-color: #e59eb9;
+}
 body header .nav-header .input-group {
-  width: 150px;
+  max-width: 200px;
   background-color: white;
   border-radius: 100px;
 }
@@ -520,6 +526,9 @@ body .toast .btn-close, body .modal .btn-close {
 }
 body footer {
   background-color: #953154;
+}
+body footer ul li a:hover {
+  text-decoration: underline;
 }
 body footer hr {
   margin-left: 20%;
