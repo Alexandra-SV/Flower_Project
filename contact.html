@@ -190,51 +190,34 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="table-responsive">
-            <table class="table table-hover text-center table-bordered">
-              <thead>
-                <tr>
-                  <th scope="col">Product</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Quantity</th>
-                  <th scope="col">Subtotal</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody class="table-group-divider">
-                <tr>
-                  <th scope="row">White Camellia</th>
-                  <td>13.00€</td>
-                  <td>25</td>
-                  <td>325€</td>
-                  <td>
-                    <a href="#" class="text-decoration-none nav-link">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x"
-                        viewBox="0 0 16 16">
-                        <path
-                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                      </svg>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Bloody Rose Seeds</th>
-                  <td>5.99€</td>
-                  <td>5</td>
-                  <td>29.25€</td>
-                  <td>
-                    <a href="#" class="text-decoration-none nav-link">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x"
-                        viewBox="0 0 16 16">
-                        <path
-                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                      </svg>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <ul class="list-group mb-3">
+            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">25 x White Camellia</div>
+                  325€ (13.00€)
+              </div>
+              <a href="#" class="text-decoration-none nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+              </a>
+            </li>
+            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">5 x Bloody Rose Seeds</div>
+                  29.25€ (5.99€)
+              </div>
+              <a href="#" class="text-decoration-none nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+              </a>
+            </li>
+          </ul>
           <div class="row">
             <div class="col-4">
               <label for="validationCustomPromo" class="form-label">Promotion Code</label>
@@ -584,6 +567,7 @@
               <path
                 d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
             </svg>
+            <span class="badge rounded-pill">2</span>
           </a>
         </div>
       </div>
@@ -597,7 +581,7 @@
       </div>
       <!--Nav header desktop-->
       <nav class="col-4 nav-header d-flex justify-content-end">
-        <div class="input-group">
+        <div class="input-group w-50">
           <input type="text" class="form-control" aria-label="Search" aria-describedby="button-search-desktop">
           <button class="btn" type="button" id="button-search-desktop">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#953154" class="bi bi-search"
@@ -614,6 +598,7 @@
               <path
                 d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
             </svg>
+            <span class="badge rounded-pill">2</span>
           </a>
           <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#signInModal">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person-fill"

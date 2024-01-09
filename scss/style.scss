@@ -57,6 +57,10 @@ body {
                     border-color: $dark-pink;
                 }
             }
+            .list-group .list-group-item-action{
+                @extend %bubblegum-bg-dark-text;
+                border-color: $dark-pink;
+            }
             table{
                 thead th, #total{@extend %dark-bg-white-text;}
                 tr{
@@ -78,8 +82,11 @@ body {
 /*Header*/
     header {
         background-color: $dark-pink;
+        .badge{
+            background-color: $bubblegum-pink;
+        }
         .nav-header .input-group {
-            width: 150px;
+            max-width: 200px;
             background-color: white;
             border-radius: 100px;
             button:active {border: 0px solid;}
@@ -278,7 +285,7 @@ body {
             }
             .navbar-nav-scroll {
                 max-height:30vh;
-                
+
                 scrollbar-width: none; //for firefox
                 &::-webkit-scrollbar {display: none;}//for chrome
             }
@@ -293,9 +300,9 @@ body {
                 }
             }
         }
-        
+
         #wedding-list{
-            .list-group-item{                
+            .list-group-item{
                 background-color:$dusty-pink;
                 color: $dark-pink;
                 border:1px solid  $dark-pink;
@@ -310,7 +317,7 @@ body {
                     .badge{
                         background-color: $bubblegum-pink;
                     }
-                }                
+                }
             }
         }
     }
@@ -475,6 +482,9 @@ body {
     /*Footer*/
     footer {
         background-color: $dark-pink;
+        ul li a:hover{
+            text-decoration: underline;
+        }
         hr {
             margin-left: 20%;
             margin-right: 20%;
