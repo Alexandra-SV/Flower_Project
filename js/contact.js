@@ -117,13 +117,15 @@ resolutions = [
             comments.appendChild(p);
         }
     }
-    function keepComent() {
+    function keepComent(e) {
         var form=this.parentElement;
          if(form.checkValidity()){
              var user=document.getElementById('dropdownUser').value;
              var comment=document.getElementById('dropdownComment').value;
              sessionStorage.setItem(user,comment);
-
+             form.reset();
+             e.preventDefault();
+             resetValidation();
              commentLoad();
          }
      }
