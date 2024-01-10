@@ -11,11 +11,11 @@ body main section .faqs a:not(.collapsed), body main section .faqs button:not(.c
 }
 
 body {
-  /*PARTE ALEXANDRA*/
+  /*ALEXANDRA'S PART*/
   background-color: #fde4fe;
   font-family: "Alexandria", serif;
   /*Back to top button*/
-  /*Sign in/out modals*/
+  /*Modals*/
   /*Header*/
   /*Desktop navbar*/
   /*Index Main*/
@@ -28,7 +28,7 @@ body {
   /*Contact Modal*/
   /*Contact Toast*/
   /*Contact toast & modal close buttons*/
-  /*PARTE ALEXANDRA*/
+  /*ALEXANDRA'S PART*/
   /*Footer*/
 }
 body #btn-back-to-top {
@@ -111,8 +111,7 @@ body header .nav-header .input-group .form-control {
 body header .nav-header .input-group .form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(229, 158, 185, 0.25);
 }
-body header .nav-burger .offcanvas-header,
-body header .nav-burger .offcanvas-footer {
+body header .nav-burger .offcanvas-header, body header .nav-burger .offcanvas-footer {
   background-color: #953154;
 }
 body header .nav-burger .offcanvas-body {
@@ -171,12 +170,14 @@ body .nav-desktop .nav-pills li ul li a {
   color: #953154;
 }
 body main {
-  /*PARTE ALFONSO*/
+  /*ALFONSO'S PART*/
   /*Wedding Banner Section*/
 }
 body main section {
-  /*SECTION 1*/
-  /*SECTION 2*/
+  /*Carousel*/
+  /*Card*/
+  /*Events*/
+  /*Accordion*/
 }
 body main section h5 {
   color: #953154;
