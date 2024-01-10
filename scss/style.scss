@@ -3,7 +3,7 @@
 @import "helper/mixins";
 
 body {
-/*PARTE ALEXANDRA*/
+/*ALEXANDRA'S PART*/
     background-color: $light-pink;
     font-family: $alexandria;
 /*Back to top button*/
@@ -20,7 +20,7 @@ body {
         }
         &:active {border: 0px solid;}
     }
-/*Sign in/out modals*/
+/*Modals*/
     .modal{
         button{
             @extend %dark-bg-white-text;
@@ -98,8 +98,7 @@ body {
             }
         }
         .nav-burger {
-            .offcanvas-header,
-            .offcanvas-footer { background-color: $dark-pink;}
+            .offcanvas-header, .offcanvas-footer { background-color: $dark-pink;}
             .offcanvas-body {
                 background-color: $bubblegum-pink;
                 ul {
@@ -155,7 +154,7 @@ body {
     main {
         section {
             h5{color: $dark-pink;}
-            /*SECTION 1*/
+            /*Carousel*/
             #flowerCarousel {
                 background-color: $dusty-pink;
                 border-radius: 10px;
@@ -174,11 +173,12 @@ body {
                     border-radius: 10px;
                 }
             }
+            /*Card*/
             .card-img-overlay{
                 background-color: rgba(149, 49, 84, 0.8);
                 bottom: 50%;
             }
-            /*SECTION 2*/
+            /*Events*/
             .events{
                 background-color: $dusty-pink;
                 border-radius: 10px;
@@ -198,6 +198,7 @@ body {
                     }
                 }
             }
+            /*Accordion*/
             .faqs{
                 a, button{
                     @extend %dark-bg-white-text;
@@ -240,7 +241,7 @@ body {
                 .accordion-body{@extend %bubblegum-bg-dark-text;}
             }
         }
-/*PARTE ALFONSO*/
+/*ALFONSO'S PART*/
     /*Wedding Banner Section*/
         #wedding-section{
             font-family: $aboreto;
@@ -478,7 +479,7 @@ body {
         .btn-close:focus {box-shadow: 0 0 0 0.25rem $light-pink}
         .btn-close {background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;}
     }
-/*PARTE ALEXANDRA*/
+/*ALEXANDRA'S PART*/
     /*Footer*/
     footer {
         background-color: $dark-pink;
